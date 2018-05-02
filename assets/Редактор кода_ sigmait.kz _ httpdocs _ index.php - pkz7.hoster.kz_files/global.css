@@ -1,0 +1,26 @@
+/* Copyright 1999-2018. Plesk International GmbH. All rights reserved. */
+
+.plesk-ext-letsencrypt--details-toggler {
+    display: inline-block;
+    margin:  8px 0 5px 20px;
+    cursor: pointer;
+    line-height: normal;
+    color: #2498e3;
+    border-bottom: 1px dashed;
+    background-size: 14px 114px;
+}
+
+span.plesk-ext-letsencrypt--details-toggler:before {
+    content: "";
+    display: block;
+    float: left;
+    width: 14px;
+    height: 18px;
+    margin-left: -20px;
+    background: url(images/details-toggler-icon.png) 0 3px no-repeat;
+    background-size: 14px 114px;
+}
+
+span.plesk-ext-letsencrypt--details-toggler-expanded:before {
+    background-position: 0 -97px;
+}
