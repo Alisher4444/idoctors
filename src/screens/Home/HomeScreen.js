@@ -1,39 +1,24 @@
-import React, { Component } from "react";
-import { Platform, StyleSheet, Image, Text, View } from "react-native";
-import {
-  Icon,
-  Button,
-  Container,
-  Header,
-  Content,
-  Left,
-  Body,
-  Title,
-  Switch,
-  Tab
-} from "native-base";
-import {
-  StackNavigator,
-  DrawerNavigator,
-  DrawerItems,
-  TabNavigator
-} from "react-navigation";
-import PatientScreen from "./components/PatientScreen";
-import HelpDesk from "./components/HelpDesk/HelpDesk";
-import Profile from "./components/Profile/Profile";
+import React, { Component } from 'react';
+import { Image } from 'react-native';
+import { StackNavigator, TabNavigator } from 'react-navigation';
+import { Container } from 'native-base';
+import PatientScreen from '../Patient/PatientScreen';
+import HelpDesk from '../HelpDesk/HelpDesk';
+import Profile from '../Profile/Profile';
 
 export default class HomeScreen extends Component {
   static navigationOptions = {
-    title: "MY PATIENTS",
+    title: 'MY PATIENTS',
     drawerIcon: (
       <Image
-        source={require("../assets/home.png")}
+        source={require('../../../assets/home.png')}
         style={{ height: 24, width: 24 }}
       />
     )
   };
 
   render() {
+    // FIX-ME MOVE TO ROUTER 🤪
     const PatientStack = StackNavigator({
       PatientScreen: {
         screen: PatientScreen

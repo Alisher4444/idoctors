@@ -1,33 +1,22 @@
-import React, { Component } from "react";
-import {
-  Platform,
-  StyleSheet,
-  Image,
-  Text,
-  View,
-  TouchableOpacity
-} from "react-native";
+import React, { Component } from 'react';
+import { Image, Text, TouchableOpacity } from 'react-native';
 import {
   Icon,
-  Button,
   Container,
-  Header,
   Content,
   Left,
   Body,
-  Title,
   Card,
   CardItem
-} from "native-base";
-import { DrawerNavigator, DrawerItems, TabNavigator } from "react-navigation";
+} from 'native-base';
 
 export default class PatientScreen extends Component {
   static navigationOptions = {
-    title: "My patients",
+    title: 'My patients',
     header: null,
     drawerIcon: (
       <Image
-        source={require("../../assets/home.png")}
+        source={require('../../../assets/home.png')}
         style={{ height: 24, width: 24 }}
       />
     )
@@ -38,22 +27,22 @@ export default class PatientScreen extends Component {
         <Content
           contentContianerStyle={{
             flex: 1,
-            alignItems: "center",
-            justifyContent: "center"
+            alignItems: 'center',
+            justifyContent: 'center'
           }}
         >
           <TouchableOpacity
-            onPress={() => this.props.navigation.navigate("DrawerOpen")}
+            onPress={() => this.props.navigation.navigate('DrawerOpen')}
           >
             <Card style={{ marginLeft: 20, marginRight: 20, marginTop: 20 }}>
               <CardItem>
                 <Left>
                   <Image
-                    source={require("../../assets/kkk.jpg")}
+                    source={require('../../../assets/kkk.jpg')}
                     style={{ height: 80, width: 80, borderRadius: 100 }}
                   />
                   <Body>
-                    <Text style={{ fontSize: 20, color: "black" }}>
+                    <Text style={{ fontSize: 20, color: 'black' }}>
                       Alisher Bazarkhanov
                     </Text>
                     <Text note>23 year old</Text>
@@ -62,7 +51,7 @@ export default class PatientScreen extends Component {
                         name="alarm"
                         ios="ios-alarm"
                         android="md-alarm"
-                        style={{ fontSize: 20, color: "#ccc" }}
+                        style={{ fontSize: 20, color: '#ccc' }}
                       />23 year old
                     </Text>
                   </Body>
@@ -74,11 +63,11 @@ export default class PatientScreen extends Component {
             <CardItem>
               <Left>
                 <Image
-                  source={require("../../assets/kkk.jpg")}
+                  source={require('../../../assets/kkk.jpg')}
                   style={{ height: 80, width: 80, borderRadius: 100 }}
                 />
                 <Body>
-                  <Text style={{ fontSize: 20, color: "black" }}>
+                  <Text style={{ fontSize: 20, color: 'black' }}>
                     Alisher Bazarkhanov
                   </Text>
                   <Text note>23 year old</Text>
@@ -87,7 +76,7 @@ export default class PatientScreen extends Component {
                       name="alarm"
                       ios="ios-alarm"
                       android="md-alarm"
-                      style={{ fontSize: 20, color: "#ccc" }}
+                      style={{ fontSize: 20, color: '#ccc' }}
                     />23 year old
                   </Text>
                 </Body>
@@ -98,11 +87,11 @@ export default class PatientScreen extends Component {
             <CardItem>
               <Left>
                 <Image
-                  source={require("../../assets/kkk.jpg")}
+                  source={require('../../../assets/kkk.jpg')}
                   style={{ height: 80, width: 80, borderRadius: 100 }}
                 />
                 <Body>
-                  <Text style={{ fontSize: 20, color: "black" }}>
+                  <Text style={{ fontSize: 20, color: 'black' }}>
                     Alisher Bazarkhanov
                   </Text>
                   <Text note>23 year old</Text>
@@ -111,7 +100,7 @@ export default class PatientScreen extends Component {
                       name="alarm"
                       ios="ios-alarm"
                       android="md-alarm"
-                      style={{ fontSize: 20, color: "#ccc" }}
+                      style={{ fontSize: 20, color: '#ccc' }}
                     />23 year old
                   </Text>
                 </Body>
