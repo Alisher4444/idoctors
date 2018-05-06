@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 
 import {
   Icon,
@@ -15,9 +15,9 @@ import {
   Right
 } from 'native-base';
 
-export default class Profile extends Component {
+export default class User extends Component {
   static navigationOptions = {
-    title: 'Profile',
+    title: 'User',
     tabBarVisible: false,
     header: null
   };

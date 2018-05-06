@@ -12,10 +12,11 @@ import {
   Thumbnail,
   Card,
   CardItem,
-  Right
+  Right,
+  Button
 } from 'native-base';
 
-export default class Profile extends Component {
+export default class HelpDeskProfile extends Component {
   static navigationOptions = {
     title: 'Profile',
     tabBarVisible: false,
@@ -45,7 +46,7 @@ export default class Profile extends Component {
           <View
             style={{
               width: '100%',
-              height: 200,
+              height: 250,
               //backgroundColor: 'rgba(16, 103, 229,0.5)',
               zIndex: 2
             }}
@@ -60,50 +61,75 @@ export default class Profile extends Component {
             />
             <View style={styles.uinfo}>
               <Text style={styles.name}>Alisher Bazarkhanov</Text>
-              <Text style={styles.spec}>Developer</Text>
+              <Text style={styles.spec}>Name of disease</Text>
+              <Text style={styles.money}>Need: 500,000тг</Text>
             </View>
           </View>
           <TouchableOpacity style={styles.button} onPress={this.onPress}>
             <Text style={styles.btnText}> Touch Here </Text>
           </TouchableOpacity>
-          <View style={styles.cardView}>
-            <Card style={styles.card}>
-              <CardItem>
-                <Left>
-                  <Icon name="bluetooth" />
-                </Left>
-                <Body>
-                  <Text style={styles.bdyText}>Your text here</Text>
-                </Body>
-                <Right>
-                  <Icon name="arrow-forward" />
-                </Right>
-              </CardItem>
-            </Card>
-            <Card style={styles.card}>
-              <CardItem>
-                <Left>
-                  <Icon name="bluetooth" />
-                </Left>
-                <Body>
-                  <Text style={styles.bdyText}>Your text here</Text>
-                </Body>
-                <Right>
-                  <Icon name="arrow-forward" />
-                </Right>
-              </CardItem>
-            </Card>
-          </View>
+          <Card
+            style={{ flex: 0, marginLeft: 10, marginRight: 10, marginTop: 20 }}
+          >
+            <CardItem
+              style={{
+                borderBottomColor: '#ccc',
+                borderBottomWidth: 1
+              }}
+            >
+              <Body>
+                <Text style={{ fontSize: 20, color: 'black' }}> About</Text>
+              </Body>
+            </CardItem>
+            <CardItem>
+              <Body>
+                <Text style={{ fontSize: 15, color: 'black' }}>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.{' '}
+                </Text>
+              </Body>
+            </CardItem>
+          </Card>
+          <Card
+            style={{ flex: 0, marginLeft: 10, marginRight: 10, marginTop: 20 }}
+          >
+            <CardItem
+              style={{
+                borderBottomColor: '#ccc',
+                borderBottomWidth: 1
+              }}
+            >
+              <Body>
+                <Text style={{ fontSize: 20, color: 'black' }}>
+                  {' '}
+                  Contact Information
+                </Text>
+              </Body>
+            </CardItem>
+            <CardItem>
+              <Body>
+                <Text
+                  style={{ fontSize: 15, color: 'black', marginBottom: 10 }}
+                >
+                  +7(777) 890-76-56
+                </Text>
+                <Text
+                  style={{ fontSize: 15, color: 'black', marginBottom: 10 }}
+                >
+                  +7(707) 913-13-44
+                </Text>
+                <Text
+                  style={{ fontSize: 15, color: 'black', marginBottom: 10 }}
+                >
+                  developer@gmail.com
+                </Text>
+              </Body>
+            </CardItem>
+          </Card>
         </Content>
-        <View style={styles.btnsBttm}>
-          <TouchableOpacity style={styles.call} onPress={this.onPress}>
-            <Text style={styles.btnText}>  Позвонить </Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.message} onPress={this.onPress}>
-            <Text style={styles.btnText}> Написать </Text>
-          </TouchableOpacity>
-        </View>
       </Container>
     );
   }
@@ -134,7 +160,7 @@ const styles = StyleSheet.create({
   },
   button: {
     alignItems: 'center',
-    backgroundColor: '#10A1E5',
+    backgroundColor: '#1EBE36',
     padding: 10,
     borderRadius: 50,
     marginLeft: 20,
@@ -175,5 +201,11 @@ const styles = StyleSheet.create({
     padding: 10,
     alignItems: 'center',
     backgroundColor: '#F39C12'
+  },
+  money: {
+    color: 'green',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    fontSize: 15
   }
 });

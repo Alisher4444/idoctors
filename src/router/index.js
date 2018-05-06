@@ -8,16 +8,37 @@ import {
   Icon,
   Left,
   Button,
-  Title
+  Title,
+  Tab
 } from 'native-base';
-import { DrawerNavigator, DrawerItems, StackNavigator } from 'react-navigation';
+import {
+  DrawerNavigator,
+  DrawerItems,
+  StackNavigator,
+  TabNavigator
+} from 'react-navigation';
 import {
   Switch,
   Login,
   Register,
-  HomeScreen,
+  PatientScreen,
+  HelpDesk,
+  Completed,
+  Upcoming,
+  Canceled,
+  DiseaseProfile,
+  //--HelpDeskProfile,
+  Disease,
+  Doctors,
+  //--Consultation,
+  //--AppointmentDetails,
+  //Information,
+  //--Review
+  //--User
   // SettingScreen,
-  // Profile,
+  //--Profile
+  //FirstPage,
+  //MainScreen,
   FirstPage
 } from '../screens';
 
@@ -39,7 +60,7 @@ const CustomDrawerContentComponent = props => (
 
 const LoginStack = StackNavigator({
   Welcome: {
-    screen: FirstPage
+    screen: DiseaseProfile
   },
   Switch: {
     screen: Switch
@@ -51,11 +72,43 @@ const LoginStack = StackNavigator({
     screen: Register
   }
 });
+const TabStack = TabNavigator({
+  Patient: {
+    screen: PatientScreen
+  },
+  HelpDesk: {
+    screen: HelpDesk
+  }
+});
+
+const TabAppoitment = TabNavigator({
+  Completed: {
+    screen: Completed
+  },
+  Upcoming: {
+    screen: Upcoming
+  },
+  Canceled: {
+    screen: Canceled
+  }
+});
+
+const TabConsultations = TabNavigator({
+  Disease: {
+    screen: Disease
+  },
+  Doctors: {
+    screen: Doctors
+  },
+  HelpDesk: {
+    screen: HelpDesk
+  }
+});
 
 const DrawerStack = DrawerNavigator(
   {
     Home: {
-      screen: FirstPage
+      screen: DiseaseProfile
     }
   },
   {
@@ -98,6 +151,15 @@ const Router = StackNavigator({
   },
   DrawerStack: {
     screen: DrawerStack
+  },
+  TabStack: {
+    screen: TabConsultations
+  },
+  TabAppoitment: {
+    screen: TabConsultations
+  },
+  TabConsultations: {
+    screen: TabConsultations
   }
 });
 

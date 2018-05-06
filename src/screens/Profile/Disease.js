@@ -15,9 +15,9 @@ import {
   Right
 } from 'native-base';
 
-export default class Profile extends Component {
+export default class Disease extends Component {
   static navigationOptions = {
-    title: 'Profile',
+    title: 'Disease"s Profile',
     tabBarVisible: false,
     header: null
   };
@@ -45,65 +45,75 @@ export default class Profile extends Component {
           <View
             style={{
               width: '100%',
-              height: 200,
+              height: '100%',
               //backgroundColor: 'rgba(16, 103, 229,0.5)',
               zIndex: 2
             }}
           >
-            <Thumbnail
-              large
-              source={{
-                uri:
-                  'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
+            <Card
+              style={{
+                flex: 0,
+                marginLeft: 10,
+                marginRight: 10,
+                marginTop: 20
               }}
-              style={styles.photo}
-            />
-            <View style={styles.uinfo}>
-              <Text style={styles.name}>Alisher Bazarkhanov</Text>
-              <Text style={styles.spec}>Developer</Text>
-            </View>
-          </View>
-          <TouchableOpacity style={styles.button} onPress={this.onPress}>
-            <Text style={styles.btnText}> Touch Here </Text>
-          </TouchableOpacity>
-          <View style={styles.cardView}>
-            <Card style={styles.card}>
-              <CardItem>
-                <Left>
-                  <Icon name="bluetooth" />
-                </Left>
+            >
+              <CardItem
+                style={{
+                  borderBottomColor: '#ccc',
+                  borderBottomWidth: 1
+                }}
+              >
                 <Body>
-                  <Text style={styles.bdyText}>Your text here</Text>
+                  <Text style={{ fontSize: 20, color: 'black' }}>
+                    {' '}
+                    Indigestion
+                  </Text>
                 </Body>
-                <Right>
-                  <Icon name="arrow-forward" />
-                </Right>
               </CardItem>
-            </Card>
-            <Card style={styles.card}>
-              <CardItem>
-                <Left>
-                  <Icon name="bluetooth" />
-                </Left>
+              <CardItem
+                style={{
+                  borderBottomColor: '#ccc',
+                  borderBottomWidth: 1
+                }}
+              >
                 <Body>
-                  <Text style={styles.bdyText}>Your text here</Text>
+                  <Text style={{ fontSize: 15, color: 'black' }}>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.{' '}
+                  </Text>
                 </Body>
-                <Right>
-                  <Icon name="arrow-forward" />
-                </Right>
+              </CardItem>
+              <CardItem
+                style={{
+                  borderBottomColor: '#ccc',
+                  borderBottomWidth: 1
+                }}
+              >
+                <Body>
+                  <Text style={{ fontSize: 20, color: 'black' }}>
+                    {' '}
+                    Symptoms
+                  </Text>
+                </Body>
+              </CardItem>
+              <CardItem>
+                <Body>
+                  <Text style={{ fontSize: 15, color: 'black' }}>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.{' '}
+                  </Text>
+                </Body>
               </CardItem>
             </Card>
           </View>
         </Content>
-        <View style={styles.btnsBttm}>
-          <TouchableOpacity style={styles.call} onPress={this.onPress}>
-            <Text style={styles.btnText}>  Позвонить </Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.message} onPress={this.onPress}>
-            <Text style={styles.btnText}> Написать </Text>
-          </TouchableOpacity>
-        </View>
       </Container>
     );
   }
