@@ -19,6 +19,7 @@ import HelpDeskProfile from './HelpDeskProfile/HelpDeskProfile';
 import Disease from './Disease/Disease';
 import Doctors from './Doctors/Doctors';
 import DiseaseProfile from './Profile/Disease';
+import PatinetProfile from './Profile/Patient';
 
 export {
   Switch,
@@ -41,5 +42,6 @@ export {
   Consultation,
   Disease,
   Doctors,
-  DiseaseProfile
+  DiseaseProfile,
+  PatinetProfile
 };

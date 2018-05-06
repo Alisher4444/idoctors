@@ -27,6 +27,7 @@ import {
   Upcoming,
   Canceled,
   DiseaseProfile,
+  PatinetProfile,
   //--HelpDeskProfile,
   Disease,
   Doctors,
@@ -39,7 +40,8 @@ import {
   //--Profile
   //FirstPage,
   //MainScreen,
-  FirstPage
+  FirstPage,
+  HomeScreen
 } from '../screens';
 
 const CustomDrawerContentComponent = props => (
@@ -60,7 +62,7 @@ const CustomDrawerContentComponent = props => (
 
 const LoginStack = StackNavigator({
   Welcome: {
-    screen: DiseaseProfile
+    screen: PatinetProfile
   },
   Switch: {
     screen: Switch
@@ -108,7 +110,7 @@ const TabConsultations = TabNavigator({
 const DrawerStack = DrawerNavigator(
   {
     Home: {
-      screen: DiseaseProfile
+      screen: FirstPage
     }
   },
   {

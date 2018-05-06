@@ -12,7 +12,8 @@ import {
   Thumbnail,
   Card,
   CardItem,
-  Right
+  Right,
+  Button
 } from 'native-base';
 
 export default class Disease extends Component {
@@ -112,78 +113,108 @@ export default class Disease extends Component {
                 </Body>
               </CardItem>
             </Card>
+
+            <Text
+              style={{
+                marginLeft: 10,
+                fontSize: 25,
+                color: 'black',
+                marginTop: 30
+              }}
+            >
+              Specialist
+            </Text>
+            <Card style={{ flex: 0, marginLeft: 10, marginRight: 10 }}>
+              <CardItem>
+                <Left>
+                  <Thumbnail
+                    source={{
+                      uri:
+                        'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
+                    }}
+                  />
+                  <Body>
+                    <Text>NativeBase</Text>
+                    <Text>April 15, 2016</Text>
+                  </Body>
+                </Left>
+                <Right>
+                  <Button transparent textStyle={{ color: '#87838B' }}>
+                    <Icon name="heart" />
+                    <Text>1,926 stars</Text>
+                  </Button>
+                </Right>
+              </CardItem>
+            </Card>
+            <Card style={{ flex: 0, marginLeft: 10, marginRight: 10 }}>
+              <CardItem>
+                <Left>
+                  <Thumbnail
+                    source={{
+                      uri:
+                        'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
+                    }}
+                  />
+                  <Body>
+                    <Text>NativeBase</Text>
+                    <Text>April 15, 2016</Text>
+                  </Body>
+                </Left>
+                <Right>
+                  <Button transparent textStyle={{ color: '#87838B' }}>
+                    <Icon name="heart" />
+                    <Text>1,926 stars</Text>
+                  </Button>
+                </Right>
+              </CardItem>
+            </Card>
+            <Card style={{ flex: 0, marginLeft: 10, marginRight: 10 }}>
+              <CardItem>
+                <Left>
+                  <Thumbnail
+                    source={{
+                      uri:
+                        'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
+                    }}
+                  />
+                  <Body>
+                    <Text>NativeBase</Text>
+                    <Text>April 15, 2016</Text>
+                  </Body>
+                </Left>
+                <Right>
+                  <Button transparent textStyle={{ color: '#87838B' }}>
+                    <Icon name="heart" />
+                    <Text>1,926 stars</Text>
+                  </Button>
+                </Right>
+              </CardItem>
+            </Card>
+            <Card style={{ flex: 0, marginLeft: 10, marginRight: 10 }}>
+              <CardItem>
+                <Left>
+                  <Thumbnail
+                    source={{
+                      uri:
+                        'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
+                    }}
+                  />
+                  <Body>
+                    <Text>NativeBase</Text>
+                    <Text>April 15, 2016</Text>
+                  </Body>
+                </Left>
+                <Right>
+                  <Button transparent textStyle={{ color: '#87838B' }}>
+                    <Icon name="heart" />
+                    <Text>1,926 stars</Text>
+                  </Button>
+                </Right>
+              </CardItem>
+            </Card>
           </View>
         </Content>
       </Container>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  photo: {
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    marginTop: 50,
-    width: 100,
-    height: 100,
-    borderRadius: 100
-  },
-  uinfo: {
-    marginLeft: 'auto',
-    marginRight: 'auto'
-  },
-  name: {
-    color: 'black',
-    fontSize: 23
-  },
-  spec: {
-    color: 'black',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    fontSize: 15
-  },
-  button: {
-    alignItems: 'center',
-    backgroundColor: '#10A1E5',
-    padding: 10,
-    borderRadius: 50,
-    marginLeft: 20,
-    marginRight: 20,
-    marginTop: 30
-  },
-  cardView: {
-    marginTop: 50
-  },
-  card: {
-    marginLeft: 10,
-    marginRight: 10
-  },
-  btnText: {
-    color: 'white',
-    fontSize: 20
-  },
-  bdyText: {
-    fontSize: 20
-  },
-  btnsBttm: {
-    position: 'absolute',
-    bottom: 0,
-    width: '100%',
-    flex: 1,
-    flexDirection: 'row'
-  },
-  call: {
-    width: '50%',
-    height: 50,
-    alignItems: 'center',
-    backgroundColor: '#27AE60',
-    padding: 10
-  },
-  message: {
-    width: '50%',
-    height: 50,
-    padding: 10,
-    alignItems: 'center',
-    backgroundColor: '#F39C12'
-  }
-});
