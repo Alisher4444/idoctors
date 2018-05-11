@@ -28,7 +28,7 @@ export default class Profile extends Component {
           <Left>
             <Icon
               name="arrow-back"
-              onPress={() => this.props.navigation.navigate('Login')}
+              onPress={() => this.props.navigation.navigate('DrawerOpen')}
             />
           </Left>
           <Body>
@@ -60,7 +60,7 @@ export default class Profile extends Component {
             />
             <View style={styles.uinfo}>
               <Text style={styles.name}>Alisher Bazarkhanov</Text>
-              <Text style={styles.spec}>Developer</Text>
+              <Text style={styles.spec}>Doctor</Text>
             </View>
           </View>
           <TouchableOpacity style={styles.button} onPress={this.onPress}>

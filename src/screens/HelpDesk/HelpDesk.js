@@ -11,16 +11,6 @@ import {
 } from 'native-base';
 
 export default class HelpDesk extends Component {
-  static navigationOptions = {
-    title: 'Help Desk',
-    header: null,
-    drawerIcon: (
-      <Image
-        source={require('../../../assets/home.png')}
-        style={{ height: 24, width: 24 }}
-      />
-    )
-  };
   render() {
     return (
       <Container>

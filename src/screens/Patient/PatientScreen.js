@@ -11,16 +11,6 @@ import {
 } from 'native-base';
 
 export default class PatientScreen extends Component {
-  static navigationOptions = {
-    title: 'My patients',
-    header: null,
-    drawerIcon: (
-      <Image
-        source={require('../../../assets/home.png')}
-        style={{ height: 24, width: 24 }}
-      />
-    )
-  };
   render() {
     return (
       <Container>
@@ -32,7 +22,7 @@ export default class PatientScreen extends Component {
           }}
         >
           <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('DrawerOpen')}
+            onPress={() => this.props.navigation.navigate('User')}
           >
             <Card style={{ marginLeft: 20, marginRight: 20, marginTop: 20 }}>
               <CardItem>

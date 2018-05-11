@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Image } from 'react-native';
+import { StyleSheet, Image, Text, TouchableOpacity } from 'react-native';
 import {
   Container,
   Content,
@@ -28,14 +28,16 @@ import {
   Canceled,
   DiseaseProfile,
   PatinetProfile,
+  DoctorProfile,
   //--HelpDeskProfile,
   Disease,
   Doctors,
+  DoctorsLogin,
   //--Consultation,
   //--AppointmentDetails,
   //Information,
   //--Review
-  //--User
+  User,
   // SettingScreen,
   //--Profile
   //FirstPage,
@@ -62,7 +64,7 @@ const CustomDrawerContentComponent = props => (
 
 const LoginStack = StackNavigator({
   Welcome: {
-    screen: PatinetProfile
+    screen: FirstPage
   },
   Switch: {
     screen: Switch
@@ -70,18 +72,33 @@ const LoginStack = StackNavigator({
   Login: {
     screen: Login
   },
+  DoctorsLogin: {
+    screen: DoctorsLogin
+  },
   Register: {
     screen: Register
   }
 });
-const TabStack = TabNavigator({
-  Patient: {
-    screen: PatientScreen
+
+const Accounts = StackNavigator({
+  User: {
+    screen: User
   },
-  HelpDesk: {
-    screen: HelpDesk
+  DoctorProfile: {
+    screen: DoctorProfile
   }
 });
+const TabStack = TabNavigator(
+  {
+    Patient: {
+      screen: PatientScreen
+    },
+    HelpDesk: {
+      screen: HelpDesk
+    }
+  },
+  {}
+);
 
 const TabAppoitment = TabNavigator({
   Completed: {
@@ -110,7 +127,16 @@ const TabConsultations = TabNavigator({
 const DrawerStack = DrawerNavigator(
   {
     Home: {
-      screen: FirstPage
+      screen: TabStack
+    },
+    TabAppoitment: {
+      screen: TabAppoitment
+    },
+    TabConsultations: {
+      screen: TabConsultations
+    },
+    Accounts: {
+      screen: Accounts
     }
   },
   {
@@ -120,8 +146,7 @@ const DrawerStack = DrawerNavigator(
     drawerOpenRoute: 'DrawerOpen',
     drawerCloseRoute: 'DrawerClose',
     drawerToggleRoute: 'DrawerToggle',
-    navigationOptions: {
-      title: 'App',
+    navigationOptions: ({ navigation }) => ({
       drawerIcon: (
         <Image
           source={require('../../assets/home.png')}
@@ -133,7 +158,7 @@ const DrawerStack = DrawerNavigator(
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.navigate('DrawerOpen')}
+              onPress={() => navigation.navigate('DrawerOpen')}
             >
               <Icon name="home" ios="ios-menu" android="md-menu" />
             </Button>
@@ -143,7 +168,7 @@ const DrawerStack = DrawerNavigator(
           </Body>
         </Header>
       )
-    }
+    })
   }
 );
 
@@ -153,15 +178,6 @@ const Router = StackNavigator({
   },
   DrawerStack: {
     screen: DrawerStack
-  },
-  TabStack: {
-    screen: TabConsultations
-  },
-  TabAppoitment: {
-    screen: TabConsultations
-  },
-  TabConsultations: {
-    screen: TabConsultations
   }
 });
 

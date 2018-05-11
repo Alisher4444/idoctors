@@ -28,7 +28,7 @@ export default class User extends Component {
           <Left>
             <Icon
               name="arrow-back"
-              onPress={() => this.props.navigation.navigate('Login')}
+              onPress={() => this.props.navigation.navigate('TabStack')}
             />
           </Left>
           <Body>

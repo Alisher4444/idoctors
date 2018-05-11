@@ -3,7 +3,7 @@ import Login from './Login/Login';
 import Register from './Register/Register';
 import HomeScreen from './Home/HomeScreen';
 import SettingScreen from './Settings/SettingScreen';
-import Profile from './Profile/Profile';
+import DoctorProfile from './Profile/Profile';
 import FirstPage from './Welcome/FirstPage';
 import PatientScreen from './Patient/PatientScreen';
 import HelpDesk from './HelpDesk/HelpDesk';
@@ -20,6 +20,7 @@ import Disease from './Disease/Disease';
 import Doctors from './Doctors/Doctors';
 import DiseaseProfile from './Profile/Disease';
 import PatinetProfile from './Profile/Patient';
+import DoctorsLogin from './Login/Doctors';
 
 export {
   Switch,
@@ -27,7 +28,7 @@ export {
   Register,
   HomeScreen,
   SettingScreen,
-  Profile,
+  DoctorProfile,
   FirstPage,
   PatientScreen,
   HelpDesk,
@@ -43,5 +44,6 @@ export {
   Disease,
   Doctors,
   DiseaseProfile,
-  PatinetProfile
+  PatinetProfile,
+  DoctorsLogin
 };
