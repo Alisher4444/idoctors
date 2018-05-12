@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, Text, Button } from 'react-native';
+import { Image, Text, Button, TouchableOpacity } from 'react-native';
 import {
   Icon,
   Container,
@@ -7,7 +7,9 @@ import {
   Left,
   Body,
   Card,
-  CardItem
+  CardItem,
+  Thumbnail,
+  Right
 } from 'native-base';
 
 export default class HelpDesk extends Component {
@@ -21,59 +23,105 @@ export default class HelpDesk extends Component {
             justifyContent: 'center'
           }}
         >
-          <Button
-            title="as"
-            onPress={() => this.props.navigation.navigate('Profile')}
-            style={{ backgroundColor: 'blue', width: 100, height: 20 }}
-          />
-          <Card style={{ marginLeft: 20, marginRight: 20, marginTop: 20 }}>
-            <CardItem>
-              <Left>
-                <Image
-                  source={require('../../../assets/kkk.jpg')}
-                  style={{ height: 80, width: 80, borderRadius: 100 }}
-                />
-                <Body>
-                  <Text style={{ fontSize: 20, color: 'black' }}>
-                    Alisher Bazarkhanov
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate('HelpDeskProfile')}
+          >
+            <Card style={{ flex: 0, marginLeft: 5, marginRight: 5 }}>
+              <CardItem>
+                <Left>
+                  <Thumbnail
+                    source={{
+                      uri:
+                        'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
+                    }}
+                  />
+                  <Body>
+                    <Text
+                      style={{
+                        fontWeight: 'bold',
+                        color: 'black',
+                        fontSize: 14.5
+                      }}
+                    >
+                      Alisher Alisherov
+                    </Text>
+                    <Text>Name of disease</Text>
+                  </Body>
+                </Left>
+                <Right>
+                  <Text style={{ color: '#30A1FF', marginBottom: 50 }}>
+                    12.12.12
                   </Text>
-                  <Text note>23 year old</Text>
-                  <Text note>
-                    <Icon
-                      name="alarm"
-                      ios="ios-alarm"
-                      android="md-alarm"
-                      style={{ fontSize: 20, color: '#ccc' }}
-                    />23 year old
+                </Right>
+              </CardItem>
+            </Card>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate('Login')}
+          >
+            <Card style={{ flex: 0, marginLeft: 5, marginRight: 5 }}>
+              <CardItem>
+                <Left>
+                  <Thumbnail
+                    source={{
+                      uri:
+                        'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
+                    }}
+                  />
+                  <Body>
+                    <Text
+                      style={{
+                        fontWeight: 'bold',
+                        color: 'black',
+                        fontSize: 14.5
+                      }}
+                    >
+                      Alisher Alisherov
+                    </Text>
+                    <Text>Name of disease</Text>
+                  </Body>
+                </Left>
+                <Right>
+                  <Text style={{ color: '#30A1FF', marginBottom: 50 }}>
+                    12.12.12
                   </Text>
-                </Body>
-              </Left>
-            </CardItem>
-          </Card>
-          <Card style={{ marginLeft: 20, marginRight: 20, marginTop: 20 }}>
-            <CardItem>
-              <Left>
-                <Image
-                  source={require('../../../assets/kkk.jpg')}
-                  style={{ height: 80, width: 80, borderRadius: 100 }}
-                />
-                <Body>
-                  <Text style={{ fontSize: 20, color: 'black' }}>
-                    Alisher Bazarkhanov
+                </Right>
+              </CardItem>
+            </Card>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate('Login')}
+          >
+            <Card style={{ flex: 0, marginLeft: 5, marginRight: 5 }}>
+              <CardItem>
+                <Left>
+                  <Thumbnail
+                    source={{
+                      uri:
+                        'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
+                    }}
+                  />
+                  <Body>
+                    <Text
+                      style={{
+                        fontWeight: 'bold',
+                        color: 'black',
+                        fontSize: 14.5
+                      }}
+                    >
+                      Alisher Alisherov
+                    </Text>
+                    <Text>Name of disease</Text>
+                  </Body>
+                </Left>
+                <Right>
+                  <Text style={{ color: '#30A1FF', marginBottom: 50 }}>
+                    12.12.12
                   </Text>
-                  <Text note>23 year old</Text>
-                  <Text note>
-                    <Icon
-                      name="alarm"
-                      ios="ios-alarm"
-                      android="md-alarm"
-                      style={{ fontSize: 20, color: '#ccc' }}
-                    />23 year old
-                  </Text>
-                </Body>
-              </Left>
-            </CardItem>
-          </Card>
+                </Right>
+              </CardItem>
+            </Card>
+          </TouchableOpacity>
         </Content>
       </Container>
     );

@@ -34,7 +34,7 @@ export default class Login extends Component {
             style={styles.input}
           />
           <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('TabConsultations')}
+            onPress={() => this.props.navigation.navigate('PatientHome')}
             style={styles.button}
           >
             <Text style={styles.btnText}>LOGIN</Text>

@@ -20,7 +20,8 @@
     "react-native-pages": "^0.7.0",
     "react-native-safe-area-view": "^0.7.0",
     "react-native-scripts": "^1.11.1",
-    "react-native-vector-icons": "^4.5.0",
+    "react-native-scrollable-tab-view": "^0.8.0",
+    "react-native-vector-icons": "^4.6.0",
     "react-navigation": "^1.5.8"
   },
   "devDependencies": {

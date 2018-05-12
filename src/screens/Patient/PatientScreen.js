@@ -7,7 +7,8 @@ import {
   Left,
   Body,
   Card,
-  CardItem
+  CardItem,
+  Thumbnail
 } from 'native-base';
 
 export default class PatientScreen extends Component {
@@ -27,9 +28,11 @@ export default class PatientScreen extends Component {
             <Card style={{ marginLeft: 20, marginRight: 20, marginTop: 20 }}>
               <CardItem>
                 <Left>
-                  <Image
-                    source={require('../../../assets/kkk.jpg')}
-                    style={{ height: 80, width: 80, borderRadius: 100 }}
+                  <Thumbnail
+                    source={{
+                      uri:
+                        'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
+                    }}
                   />
                   <Body>
                     <Text style={{ fontSize: 20, color: 'black' }}>
@@ -52,9 +55,11 @@ export default class PatientScreen extends Component {
           <Card style={{ marginLeft: 20, marginRight: 20, marginTop: 20 }}>
             <CardItem>
               <Left>
-                <Image
-                  source={require('../../../assets/kkk.jpg')}
-                  style={{ height: 80, width: 80, borderRadius: 100 }}
+                <Thumbnail
+                  source={{
+                    uri:
+                      'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
+                  }}
                 />
                 <Body>
                   <Text style={{ fontSize: 20, color: 'black' }}>
@@ -76,9 +81,11 @@ export default class PatientScreen extends Component {
           <Card style={{ marginLeft: 20, marginRight: 20, marginTop: 20 }}>
             <CardItem>
               <Left>
-                <Image
-                  source={require('../../../assets/kkk.jpg')}
-                  style={{ height: 80, width: 80, borderRadius: 100 }}
+                <Thumbnail
+                  source={{
+                    uri:
+                      'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
+                  }}
                 />
                 <Body>
                   <Text style={{ fontSize: 20, color: 'black' }}>

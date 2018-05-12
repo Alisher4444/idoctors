@@ -7,13 +7,14 @@ import {
   Left,
   Body,
   Card,
-  CardItem
+  CardItem,
+  Thumbnail
 } from 'native-base';
 
 export default class Completed extends Component {
   static navigationOptions = {
     title: 'Completed',
-    header: null,
+
     drawerIcon: (
       <Image
         source={require('../../../assets/home.png')}
@@ -32,7 +33,7 @@ export default class Completed extends Component {
           }}
         >
           <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('Login')}
+            onPress={() => this.props.navigation.navigate('AppointmentDetails')}
           >
             <Card
               style={{
@@ -48,9 +49,11 @@ export default class Completed extends Component {
                 }}
               >
                 <Left>
-                  <Image
-                    source={require('../../../assets/kkk.jpg')}
-                    style={{ height: 80, width: 80, borderRadius: 100 }}
+                  <Thumbnail
+                    source={{
+                      uri:
+                        'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
+                    }}
                   />
                   <Body>
                     <Text style={{ fontSize: 20, color: 'black' }}>
@@ -84,7 +87,7 @@ export default class Completed extends Component {
             </Card>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('Login')}
+            onPress={() => this.props.navigation.navigate('AppointmentDetails')}
           >
             <Card
               style={{
@@ -100,9 +103,11 @@ export default class Completed extends Component {
                 }}
               >
                 <Left>
-                  <Image
-                    source={require('../../../assets/kkk.jpg')}
-                    style={{ height: 80, width: 80, borderRadius: 100 }}
+                  <Thumbnail
+                    source={{
+                      uri:
+                        'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
+                    }}
                   />
                   <Body>
                     <Text style={{ fontSize: 20, color: 'black' }}>
@@ -136,7 +141,7 @@ export default class Completed extends Component {
             </Card>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('Login')}
+            onPress={() => this.props.navigation.navigate('AppointmentDetails')}
           >
             <Card
               style={{
@@ -152,9 +157,11 @@ export default class Completed extends Component {
                 }}
               >
                 <Left>
-                  <Image
-                    source={require('../../../assets/kkk.jpg')}
-                    style={{ height: 80, width: 80, borderRadius: 100 }}
+                  <Thumbnail
+                    source={{
+                      uri:
+                        'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
+                    }}
                   />
                   <Body>
                     <Text style={{ fontSize: 20, color: 'black' }}>

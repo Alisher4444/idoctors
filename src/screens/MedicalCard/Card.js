@@ -16,9 +16,9 @@ import {
   Right
 } from 'native-base';
 
-export default class Review extends Component {
+export default class MCard extends Component {
   static navigationOptions = {
-    title: 'Review',
+    title: 'Medical Card',
     tabBarVisible: false
   };
   render() {
@@ -44,14 +44,6 @@ export default class Review extends Component {
               <Body>
                 <Text>Your text here</Text>
               </Body>
-            </CardItem>
-            <CardItem>
-              <Left>
-                <Button transparent textStyle={{ color: '#87838B' }}>
-                  <Icon name="heart" />
-                  <Text>1,926 stars</Text>
-                </Button>
-              </Left>
             </CardItem>
           </Card>
         </Content>

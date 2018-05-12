@@ -11,39 +11,24 @@ import {
   Title,
   Tab
 } from 'native-base';
-import {
-  DrawerNavigator,
-  DrawerItems,
-  StackNavigator,
-  TabNavigator
-} from 'react-navigation';
+import { DrawerNavigator, DrawerItems, StackNavigator } from 'react-navigation';
 import {
   Switch,
   Login,
-  Register,
-  PatientScreen,
-  HelpDesk,
-  Completed,
-  Upcoming,
-  Canceled,
-  DiseaseProfile,
-  PatinetProfile,
-  DoctorProfile,
-  //--HelpDeskProfile,
-  Disease,
-  Doctors,
   DoctorsLogin,
-  //--Consultation,
-  //--AppointmentDetails,
-  //Information,
-  //--Review
+  Register,
+  DoctorProfile,
+  HelpDeskProfile,
+  Consultation,
+  AppointmentDetails,
+  Information,
+  Review,
   User,
-  // SettingScreen,
-  //--Profile
-  //FirstPage,
-  //MainScreen,
   FirstPage,
-  HomeScreen
+  HomeScreen,
+  PatientHome,
+  DiseaseProfile,
+  MedicalCard
 } from '../screens';
 
 const CustomDrawerContentComponent = props => (
@@ -63,80 +48,30 @@ const CustomDrawerContentComponent = props => (
 );
 
 const LoginStack = StackNavigator({
-  Welcome: {
-    screen: FirstPage
-  },
-  Switch: {
-    screen: Switch
-  },
-  Login: {
-    screen: Login
-  },
   DoctorsLogin: {
     screen: DoctorsLogin
+  },
+
+  Register: {
+    screen: Register
+  }
+});
+const LoginPatient = StackNavigator({
+  Login: {
+    screen: Login
   },
   Register: {
     screen: Register
   }
 });
 
-const Accounts = StackNavigator({
-  User: {
-    screen: User
-  },
-  DoctorProfile: {
-    screen: DoctorProfile
-  }
-});
-const TabStack = TabNavigator(
-  {
-    Patient: {
-      screen: PatientScreen
-    },
-    HelpDesk: {
-      screen: HelpDesk
-    }
-  },
-  {}
-);
-
-const TabAppoitment = TabNavigator({
-  Completed: {
-    screen: Completed
-  },
-  Upcoming: {
-    screen: Upcoming
-  },
-  Canceled: {
-    screen: Canceled
-  }
-});
-
-const TabConsultations = TabNavigator({
-  Disease: {
-    screen: Disease
-  },
-  Doctors: {
-    screen: Doctors
-  },
-  HelpDesk: {
-    screen: HelpDesk
-  }
-});
-
 const DrawerStack = DrawerNavigator(
   {
     Home: {
-      screen: TabStack
+      screen: HomeScreen
     },
-    TabAppoitment: {
-      screen: TabAppoitment
-    },
-    TabConsultations: {
-      screen: TabConsultations
-    },
-    Accounts: {
-      screen: Accounts
+    Consultation: {
+      screen: Consultation
     }
   },
   {
@@ -145,39 +80,113 @@ const DrawerStack = DrawerNavigator(
     contentComponent: CustomDrawerContentComponent,
     drawerOpenRoute: 'DrawerOpen',
     drawerCloseRoute: 'DrawerClose',
-    drawerToggleRoute: 'DrawerToggle',
-    navigationOptions: ({ navigation }) => ({
-      drawerIcon: (
-        <Image
-          source={require('../../assets/home.png')}
-          style={{ height: 24, width: 24 }}
-        />
-      ),
-      header: (
-        <Header style={{ backgroundColor: '#0095F8', elevation: 0 }}>
-          <Left>
-            <Button
-              transparent
-              onPress={() => navigation.navigate('DrawerOpen')}
-            >
-              <Icon name="home" ios="ios-menu" android="md-menu" />
-            </Button>
-          </Left>
-          <Body>
-            <Title style={{ marginLeft: 40 }}>Header</Title>
-          </Body>
-        </Header>
-      )
-    })
+    drawerToggleRoute: 'DrawerToggle'
   }
 );
 
+DrawerStack.navigationOptions = ({ navigation }) => ({
+  title: 'Doctor',
+  headerLeft: (
+    <Icon
+      style={{ paddingHorizontal: 10 }}
+      name="home"
+      ios="ios-menu"
+      android="md-menu"
+      size={30}
+      color={'white'}
+      onPress={() => {
+        if (navigation.state.index === 0) {
+          navigation.navigate('DrawerOpen');
+        } else {
+          navigation.navigate('DrawerClose');
+        }
+      }}
+    />
+  )
+});
+
+const DrawerPatientStack = DrawerNavigator(
+  {
+    PatientHome: {
+      screen: PatientHome
+    },
+    Consultation: {
+      screen: Consultation
+    },
+    MedicalCard: {
+      screen: MedicalCard
+    }
+  },
+  {
+    initialRouteName: 'PatientHome',
+    drawerPosition: 'Left',
+    contentComponent: CustomDrawerContentComponent,
+    drawerOpenRoute: 'DrawerOpen',
+    drawerCloseRoute: 'DrawerClose',
+    drawerToggleRoute: 'DrawerToggle'
+  }
+);
+
+DrawerPatientStack.navigationOptions = ({ navigation }) => ({
+  title: 'Patient',
+  headerLeft: (
+    <Icon
+      style={{ paddingHorizontal: 10 }}
+      name="home"
+      ios="ios-menu"
+      android="md-menu"
+      size={30}
+      color={'white'}
+      onPress={() => {
+        if (navigation.state.index === 0) {
+          navigation.navigate('DrawerOpen');
+        } else {
+          navigation.navigate('DrawerClose');
+        }
+      }}
+    />
+  )
+});
+
 const Router = StackNavigator({
+  Welcome: {
+    screen: FirstPage
+  },
+  Switch: {
+    screen: Switch
+  },
   LoginStack: {
     screen: LoginStack
   },
   DrawerStack: {
     screen: DrawerStack
+  },
+  LoginPatient: {
+    screen: LoginPatient
+  },
+  DrawerPatientStack: {
+    screen: DrawerPatientStack
+  },
+  User: {
+    screen: User
+  },
+  DoctorProfile: {
+    screen: DoctorProfile
+  },
+  HelpDeskProfile: {
+    screen: HelpDeskProfile
+  },
+  AppointmentDetails: {
+    screen: AppointmentDetails
+  },
+  Information: {
+    screen: Information
+  },
+  Review: {
+    screen: Review
+  },
+  DiseaseProfile: {
+    screen: DiseaseProfile
   }
 });
 

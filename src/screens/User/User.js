@@ -18,23 +18,12 @@ import {
 export default class User extends Component {
   static navigationOptions = {
     title: 'User',
-    tabBarVisible: false,
-    header: null
+    tabBarVisible: false
   };
+
   render() {
     return (
       <Container>
-        <Header>
-          <Left>
-            <Icon
-              name="arrow-back"
-              onPress={() => this.props.navigation.navigate('TabStack')}
-            />
-          </Left>
-          <Body>
-            <Title>Header</Title>
-          </Body>
-        </Header>
         <Content
           contentContianerStyle={{
             flex: 1,
@@ -67,32 +56,57 @@ export default class User extends Component {
             <Text style={styles.btnText}> Touch Here </Text>
           </TouchableOpacity>
           <View style={styles.cardView}>
-            <Card style={styles.card}>
-              <CardItem>
-                <Left>
-                  <Icon name="bluetooth" />
-                </Left>
-                <Body>
-                  <Text style={styles.bdyText}>Your text here</Text>
-                </Body>
-                <Right>
-                  <Icon name="arrow-forward" />
-                </Right>
-              </CardItem>
-            </Card>
-            <Card style={styles.card}>
-              <CardItem>
-                <Left>
-                  <Icon name="bluetooth" />
-                </Left>
-                <Body>
-                  <Text style={styles.bdyText}>Your text here</Text>
-                </Body>
-                <Right>
-                  <Icon name="arrow-forward" />
-                </Right>
-              </CardItem>
-            </Card>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate('Information')}
+            >
+              <Card style={styles.card}>
+                <CardItem>
+                  <Left>
+                    <Icon name="bluetooth" />
+                  </Left>
+                  <Body>
+                    <Text style={styles.bdyText}>Personal Information</Text>
+                  </Body>
+                  <Right>
+                    <Icon name="arrow-forward" />
+                  </Right>
+                </CardItem>
+              </Card>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate('Information')}
+            >
+              <Card style={styles.card}>
+                <CardItem>
+                  <Left>
+                    <Icon name="bluetooth" />
+                  </Left>
+                  <Body>
+                    <Text style={styles.bdyText}>Call history</Text>
+                  </Body>
+                  <Right>
+                    <Icon name="arrow-forward" />
+                  </Right>
+                </CardItem>
+              </Card>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate('Information')}
+            >
+              <Card style={styles.card}>
+                <CardItem>
+                  <Left>
+                    <Icon name="bluetooth" />
+                  </Left>
+                  <Body>
+                    <Text style={styles.bdyText}>Doctor's Notes</Text>
+                  </Body>
+                  <Right>
+                    <Icon name="arrow-forward" />
+                  </Right>
+                </CardItem>
+              </Card>
+            </TouchableOpacity>
           </View>
         </Content>
         <View style={styles.btnsBttm}>
@@ -116,7 +130,7 @@ const styles = StyleSheet.create({
     marginTop: 50,
     width: 100,
     height: 100,
-    borderRadius: 100
+    borderRadius: 50
   },
   uinfo: {
     marginLeft: 'auto',

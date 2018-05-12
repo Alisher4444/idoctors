@@ -18,24 +18,12 @@ import {
 
 export default class AppointmentDetails extends Component {
   static navigationOptions = {
-    title: 'Review',
-    tabBarVisible: false,
-    header: null
+    title: 'Appointment Details',
+    tabBarVisible: false
   };
   render() {
     return (
       <Container>
-        <Header>
-          <Left>
-            <Button transparent>
-              <Icon name="menu" />
-            </Button>
-          </Left>
-          <Body>
-            <Title style={{ alignItems: 'center' }}>Review</Title>
-          </Body>
-          <Right />
-        </Header>
         <Content>
           <Card style={{ flex: 0, marginLeft: 10, marginRight: 10 }}>
             <CardItem>

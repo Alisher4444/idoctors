@@ -31,7 +31,7 @@ export default class Disease extends Component {
             <Col style={{ height: 200, padding: 10 }}>
               <TouchableOpacity
                 style={{ height: 200 }}
-                onPress={() => this.props.navigation.navigate('Login')}
+                onPress={() => this.props.navigation.navigate('DiseaseProfile')}
               >
                 <Card style={{ borderRadius: 10 }}>
                   <CardItem style={{ borderRadius: 10 }}>
@@ -64,7 +64,7 @@ export default class Disease extends Component {
             <Col style={{ height: 200, padding: 10 }}>
               <TouchableOpacity
                 style={{ height: 200 }}
-                onPress={() => this.props.navigation.navigate('Login')}
+                onPress={() => this.props.navigation.navigate('DiseaseProfile')}
               >
                 <Card style={{ borderRadius: 10 }}>
                   <CardItem style={{ borderRadius: 10 }}>
@@ -98,7 +98,7 @@ export default class Disease extends Component {
             <Col style={{ height: 200, padding: 10 }}>
               <TouchableOpacity
                 style={{ height: 200 }}
-                onPress={() => this.props.navigation.navigate('Login')}
+                onPress={() => this.props.navigation.navigate('DiseaseProfile')}
               >
                 <Card style={{ borderRadius: 10 }}>
                   <CardItem style={{ borderRadius: 10 }}>
@@ -130,7 +130,7 @@ export default class Disease extends Component {
             <Col style={{ height: 200, padding: 10 }}>
               <TouchableOpacity
                 style={{ height: 200 }}
-                onPress={() => this.props.navigation.navigate('Login')}
+                onPress={() => this.props.navigation.navigate('DiseaseProfile')}
               >
                 <Card style={{ borderRadius: 10 }}>
                   <CardItem style={{ borderRadius: 10 }}>
@@ -164,7 +164,7 @@ export default class Disease extends Component {
             <Col style={{ height: 200, padding: 10 }}>
               <TouchableOpacity
                 style={{ height: 200 }}
-                onPress={() => this.props.navigation.navigate('Login')}
+                onPress={() => this.props.navigation.navigate('DiseaseProfile')}
               >
                 <Card style={{ borderRadius: 10 }}>
                   <CardItem style={{ borderRadius: 10 }}>
@@ -196,7 +196,7 @@ export default class Disease extends Component {
             <Col style={{ height: 200, padding: 10 }}>
               <TouchableOpacity
                 style={{ height: 200 }}
-                onPress={() => this.props.navigation.navigate('Login')}
+                onPress={() => this.props.navigation.navigate('DiseaseProfile')}
               >
                 <Card style={{ borderRadius: 10 }}>
                   <CardItem style={{ borderRadius: 10 }}>

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Image, View, Text } from 'react-native';
 import ScrollTabView from 'react-native-scrollable-tab-view';
-import HelpDesk from '../HelpDesk/HelpDesk';
-import PatientScreen from '../Patient/PatientScreen';
+import Card from '../MedicalCard/Card';
+import Notes from '../MedicalCard/DNotes';
 
-export default class HomeScreen extends Component {
+export default class MainCard extends Component {
   static navigationOptions = {
-    title: 'Home',
+    title: 'Medical Card',
     drawerIcon: (
       <Image
         source={require('../../../assets/home.png')}
@@ -19,8 +19,8 @@ export default class HomeScreen extends Component {
     const { navigation } = this.props;
     return (
       <ScrollTabView>
-        <PatientScreen tabLabel="PatientScreen" navigation={navigation} />
-        <HelpDesk tabLabel="HelpDesk" navigation={navigation} />
+        <Card tabLabel="Card" navigation={navigation} />
+        <Notes tabLabel="Notes" navigation={navigation} />
       </ScrollTabView>
     );
   }

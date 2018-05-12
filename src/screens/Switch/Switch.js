@@ -17,13 +17,13 @@ export default class Switch extends Component {
           <Text style={styles.title}>WHO YOU ARE</Text>
           <View style={styles.container}>
             <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('DoctorsLogin')}
+              onPress={() => this.props.navigation.navigate('LoginStack')}
               style={styles.button}
             >
               <Text style={styles.btnText}>DOCTOR</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('Login')}
+              onPress={() => this.props.navigation.navigate('LoginPatient')}
               style={styles.button}
             >
               <Text style={styles.btnText}>PATIENT</Text>

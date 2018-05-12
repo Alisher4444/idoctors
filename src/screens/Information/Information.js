@@ -17,24 +17,12 @@ import {
 
 export default class Information extends Component {
   static navigationOptions = {
-    title: 'Review',
-    tabBarVisible: false,
-    header: null
+    title: 'Information',
+    tabBarVisible: false
   };
   render() {
     return (
       <Container>
-        <Header>
-          <Left>
-            <Button transparent>
-              <Icon name="menu" />
-            </Button>
-          </Left>
-          <Body>
-            <Title style={{ alignItems: 'center' }}>Informationrr</Title>
-          </Body>
-          <Right />
-        </Header>
         <Content>
           <Card style={{ flex: 0, marginLeft: 10, marginRight: 10 }}>
             <Text

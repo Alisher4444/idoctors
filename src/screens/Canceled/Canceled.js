@@ -7,13 +7,14 @@ import {
   Left,
   Body,
   Card,
-  CardItem
+  CardItem,
+  Thumbnail
 } from 'native-base';
 
 export default class Canceled extends Component {
   static navigationOptions = {
     title: 'Canceled',
-    header: null,
+
     drawerIcon: (
       <Image
         source={require('../../../assets/home.png')}
@@ -32,7 +33,7 @@ export default class Canceled extends Component {
           }}
         >
           <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('Login')}
+            onPress={() => this.props.navigation.navigate('AppointmentDetails')}
           >
             <Card
               style={{
@@ -48,9 +49,65 @@ export default class Canceled extends Component {
                 }}
               >
                 <Left>
-                  <Image
-                    source={require('../../../assets/kkk.jpg')}
-                    style={{ height: 80, width: 80, borderRadius: 100 }}
+                  <Thumbnail
+                    source={{
+                      uri:
+                        'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
+                    }}
+                  />
+                  <Body>
+                    <Text style={{ fontSize: 20, color: 'black' }}>
+                      Alisher Bazarkhanov
+                    </Text>
+                    <Text note>23 year old</Text>
+                    <Text note>
+                      <Icon
+                        name="alarm"
+                        ios="ios-alarm"
+                        android="md-alarm"
+                        style={{ fontSize: 20, color: '#ccc' }}
+                      />23 year old
+                    </Text>
+                  </Body>
+                </Left>
+              </CardItem>
+              <CardItem>
+                <Body>
+                  <Text
+                    style={{
+                      color: '#DC2500',
+                      marginLeft: 'auto',
+                      marginRight: 'auto'
+                    }}
+                  >
+                    12 April, Monday, 12:00
+                  </Text>
+                </Body>
+              </CardItem>
+            </Card>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate('AppointmentDetails')}
+          >
+            <Card
+              style={{
+                marginLeft: 20,
+                marginRight: 20,
+                marginTop: 20
+              }}
+            >
+              <CardItem
+                style={{
+                  borderBottomColor: '#ccc',
+                  borderBottomWidth: 1
+                }}
+              >
+                <Left>
+                  <Thumbnail
+                    source={{
+                      uri:
+                        'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
+                    }}
                   />
                   <Body>
                     <Text style={{ fontSize: 20, color: 'black' }}>
@@ -100,61 +157,11 @@ export default class Canceled extends Component {
                 }}
               >
                 <Left>
-                  <Image
-                    source={require('../../../assets/kkk.jpg')}
-                    style={{ height: 80, width: 80, borderRadius: 100 }}
-                  />
-                  <Body>
-                    <Text style={{ fontSize: 20, color: 'black' }}>
-                      Alisher Bazarkhanov
-                    </Text>
-                    <Text note>23 year old</Text>
-                    <Text note>
-                      <Icon
-                        name="alarm"
-                        ios="ios-alarm"
-                        android="md-alarm"
-                        style={{ fontSize: 20, color: '#ccc' }}
-                      />23 year old
-                    </Text>
-                  </Body>
-                </Left>
-              </CardItem>
-              <CardItem>
-                <Body>
-                  <Text
-                    style={{
-                      color: '#DC2500',
-                      marginLeft: 'auto',
-                      marginRight: 'auto'
+                  <Thumbnail
+                    source={{
+                      uri:
+                        'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
                     }}
-                  >
-                    12 April, Monday, 12:00
-                  </Text>
-                </Body>
-              </CardItem>
-            </Card>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('Login')}
-          >
-            <Card
-              style={{
-                marginLeft: 20,
-                marginRight: 20,
-                marginTop: 20
-              }}
-            >
-              <CardItem
-                style={{
-                  borderBottomColor: '#ccc',
-                  borderBottomWidth: 1
-                }}
-              >
-                <Left>
-                  <Image
-                    source={require('../../../assets/kkk.jpg')}
-                    style={{ height: 80, width: 80, borderRadius: 100 }}
                   />
                   <Body>
                     <Text style={{ fontSize: 20, color: 'black' }}>

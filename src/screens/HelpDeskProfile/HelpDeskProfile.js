@@ -19,23 +19,11 @@ import {
 export default class HelpDeskProfile extends Component {
   static navigationOptions = {
     title: 'Profile',
-    tabBarVisible: false,
-    header: null
+    tabBarVisible: false
   };
   render() {
     return (
       <Container>
-        <Header>
-          <Left>
-            <Icon
-              name="arrow-back"
-              onPress={() => this.props.navigation.navigate('Login')}
-            />
-          </Left>
-          <Body>
-            <Title>Header</Title>
-          </Body>
-        </Header>
         <Content
           contentContianerStyle={{
             flex: 1,

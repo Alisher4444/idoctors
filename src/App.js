@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Router from './router';
+import Hello from './router';
 
 export default class App extends Component {
   render() {
-    return <Router />;
+    return <Hello />;
   }
 }

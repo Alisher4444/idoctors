@@ -10,17 +10,14 @@ import HelpDesk from './HelpDesk/HelpDesk';
 import User from './User/User';
 import Review from './Review/Review';
 import Information from './Information/Information';
-import Completed from './Completed/Completed';
-import Upcoming from './Upcoming/Upcoming';
-import Canceled from './Canceled/Canceled';
 import AppointmentDetails from './AppointmentDetails/AppointmentDetails';
 import Consultation from './Consultation/Consultation';
 import HelpDeskProfile from './HelpDeskProfile/HelpDeskProfile';
-import Disease from './Disease/Disease';
-import Doctors from './Doctors/Doctors';
 import DiseaseProfile from './Profile/Disease';
 import PatinetProfile from './Profile/Patient';
 import DoctorsLogin from './Login/Doctors';
+import PatientHome from './PatientHome/Home';
+import MedicalCard from './MedicalCard/index';
 
 export {
   Switch,
@@ -35,15 +32,12 @@ export {
   User,
   Review,
   Information,
-  Completed,
-  Upcoming,
-  Canceled,
   AppointmentDetails,
   HelpDeskProfile,
   Consultation,
-  Disease,
-  Doctors,
   DiseaseProfile,
   PatinetProfile,
-  DoctorsLogin
+  DoctorsLogin,
+  PatientHome,
+  MedicalCard
 };

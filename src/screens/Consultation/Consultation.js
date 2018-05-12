@@ -1,21 +1,14 @@
 import React, { Component } from 'react';
 import { Image, Text, TouchableOpacity } from 'react-native';
-import {
-  Icon,
-  Container,
-  Content,
-  Left,
-  Body,
-  Card,
-  CardItem,
-  Right,
-  Thumbnail
-} from 'native-base';
+import ScrollTabView from 'react-native-scrollable-tab-view';
+import Completed from '../Completed/Completed';
+import Upcoming from '../Upcoming/Upcoming';
+import Canceled from '../Canceled/Canceled';
 
 export default class Consultation extends Component {
   static navigationOptions = {
-    title: 'Canceled',
-    header: null,
+    title: 'Consultation',
+
     drawerIcon: (
       <Image
         source={require('../../../assets/home.png')}
@@ -24,116 +17,13 @@ export default class Consultation extends Component {
     )
   };
   render() {
+    const { navigation } = this.props;
     return (
-      <Container>
-        <Content
-          contentContianerStyle={{
-            flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}
-        >
-          <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('Login')}
-          >
-            <Card style={{ flex: 0, marginLeft: 5, marginRight: 5 }}>
-              <CardItem>
-                <Left>
-                  <Thumbnail
-                    source={{
-                      uri:
-                        'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
-                    }}
-                  />
-                  <Body>
-                    <Text
-                      style={{
-                        fontWeight: 'bold',
-                        color: 'black',
-                        fontSize: 14.5
-                      }}
-                    >
-                      Alisher Alisherov
-                    </Text>
-                    <Text>Name of disease</Text>
-                  </Body>
-                </Left>
-                <Right>
-                  <Text style={{ color: '#30A1FF', marginBottom: 50 }}>
-                    12.12.12
-                  </Text>
-                </Right>
-              </CardItem>
-            </Card>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('Login')}
-          >
-            <Card style={{ flex: 0, marginLeft: 5, marginRight: 5 }}>
-              <CardItem>
-                <Left>
-                  <Thumbnail
-                    source={{
-                      uri:
-                        'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
-                    }}
-                  />
-                  <Body>
-                    <Text
-                      style={{
-                        fontWeight: 'bold',
-                        color: 'black',
-                        fontSize: 14.5
-                      }}
-                    >
-                      Alisher Alisherov
-                    </Text>
-                    <Text>Name of disease</Text>
-                  </Body>
-                </Left>
-                <Right>
-                  <Text style={{ color: '#30A1FF', marginBottom: 50 }}>
-                    12.12.12
-                  </Text>
-                </Right>
-              </CardItem>
-            </Card>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('Login')}
-          >
-            <Card style={{ flex: 0, marginLeft: 5, marginRight: 5 }}>
-              <CardItem>
-                <Left>
-                  <Thumbnail
-                    source={{
-                      uri:
-                        'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
-                    }}
-                  />
-                  <Body>
-                    <Text
-                      style={{
-                        fontWeight: 'bold',
-                        color: 'black',
-                        fontSize: 14.5
-                      }}
-                    >
-                      Alisher Alisherov
-                    </Text>
-                    <Text>Name of disease</Text>
-                  </Body>
-                </Left>
-                <Right>
-                  <Text style={{ color: '#30A1FF', marginBottom: 50 }}>
-                    12.12.12
-                  </Text>
-                </Right>
-              </CardItem>
-            </Card>
-          </TouchableOpacity>
-        </Content>
-      </Container>
+      <ScrollTabView>
+        <Completed tabLabel="Completed" navigation={navigation} />
+        <Upcoming tabLabel="Upcoming" navigation={navigation} />
+        <Canceled tabLabel="Canceled" navigation={navigation} />
+      </ScrollTabView>
     );
   }
 }

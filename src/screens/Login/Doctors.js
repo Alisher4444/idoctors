@@ -8,7 +8,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-export default class Login extends Component {
+export default class Doctors extends Component {
   static navigationOptions = {
     title: 'Login',
     header: null
