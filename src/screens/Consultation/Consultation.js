@@ -27,13 +27,13 @@ export default class Consultation extends Component {
     const { navigation } = this.props;
     return (
       <Container>
-        <ScrollTabView>
-          <Completed tabLabel="Completed" navigation={navigation} />
-          <Upcoming tabLabel="Upcoming" navigation={navigation} />
-          <Canceled tabLabel="Canceled" navigation={navigation} />
-        </ScrollTabView>
-
         <View style={{ flex: 1 }}>
+          <ScrollTabView>
+            <Completed tabLabel="Completed" navigation={navigation} />
+            <Upcoming tabLabel="Upcoming" navigation={navigation} />
+            <Canceled tabLabel="Canceled" navigation={navigation} />
+          </ScrollTabView>
+
           <Fab
             active={this.state.active}
             direction="up"
