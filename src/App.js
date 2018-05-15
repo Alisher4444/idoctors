@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import firebase from 'firebase';
 import Hello from './router';
 
@@ -13,6 +14,11 @@ export default class App extends Component {
       messagingSenderId: '74208637941'
     });
   }
+=======
+import Hello from './router';
+
+export default class App extends Component {
+>>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
   render() {
     return <Hello />;
   }

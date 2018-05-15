@@ -18,6 +18,11 @@ import PatinetProfile from './Profile/Patient';
 import DoctorsLogin from './Login/Doctors';
 import PatientHome from './PatientHome/Home';
 import MedicalCard from './MedicalCard/index';
+<<<<<<< HEAD
+=======
+import Notification from './Notification/Notification';
+import Support from './Support/Support';
+>>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
 
 export {
   Switch,
@@ -39,5 +44,11 @@ export {
   PatinetProfile,
   DoctorsLogin,
   PatientHome,
+<<<<<<< HEAD
   MedicalCard
+=======
+  MedicalCard,
+  Notification,
+  Support
+>>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
 };

@@ -17,7 +17,10 @@
     "react-native-app-intro-slider": "^0.2.4",
     "react-native-button": "^2.3.0",
     "react-native-elements": "^0.19.1",
+<<<<<<< HEAD
     "react-native-gifted-messenger": "^0.1.4",
+=======
+>>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
     "react-native-pages": "^0.7.0",
     "react-native-safe-area-view": "^0.7.0",
     "react-native-scripts": "^1.11.1",
