@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-import { Image, Text, Button, TouchableOpacity } from 'react-native';
-=======
 import { Image, Text, View, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
 import {
   Icon,
   Container,
@@ -18,53 +14,15 @@ import {
 
 export default class HelpDesk extends Component {
   render() {
-<<<<<<< HEAD
-=======
     const { cardItemStyle, cardStyle, personalInfoStyle, nameStyle,
       time, avatarStyle, allInfoContainer,
       right, left, add } = styles;
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
     return (
       <Container>
         <Content
           contentContianerStyle={{
             flex: 1,
             alignItems: 'center',
-<<<<<<< HEAD
-            justifyContent: 'center'
-          }}
-        >
-          <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('HelpDeskProfile')}
-          >
-            <Card style={{ flex: 0, marginLeft: 5, marginRight: 5 }}>
-              <CardItem>
-                <Left>
-                  <Thumbnail
-                    source={{
-                      uri:
-                        'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
-                    }}
-                  />
-                  <Body>
-                    <Text
-                      style={{
-                        fontWeight: 'bold',
-                        color: 'black',
-                        fontSize: 14.5
-                      }}
-                    >
-                      Alisher Alisherov
-                    </Text>
-                    <Text>Name of disease</Text>
-                  </Body>
-                </Left>
-                <Right>
-                  <Text style={{ color: '#30A1FF', marginBottom: 50 }}>
-                    12.12.12
-                  </Text>
-                </Right>
-=======
             justifyContent: 'center',
             
           }}
@@ -168,42 +126,10 @@ export default class HelpDesk extends Component {
                   <Right style={right}> 
                     <Text style={time}>12.02.2018</Text>
                   </Right>
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
               </CardItem>
             </Card>
           </TouchableOpacity>
           <TouchableOpacity
-<<<<<<< HEAD
-            onPress={() => this.props.navigation.navigate('Login')}
-          >
-            <Card style={{ flex: 0, marginLeft: 5, marginRight: 5 }}>
-              <CardItem>
-                <Left>
-                  <Thumbnail
-                    source={{
-                      uri:
-                        'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
-                    }}
-                  />
-                  <Body>
-                    <Text
-                      style={{
-                        fontWeight: 'bold',
-                        color: 'black',
-                        fontSize: 14.5
-                      }}
-                    >
-                      Alisher Alisherov
-                    </Text>
-                    <Text>Name of disease</Text>
-                  </Body>
-                </Left>
-                <Right>
-                  <Text style={{ color: '#30A1FF', marginBottom: 50 }}>
-                    12.12.12
-                  </Text>
-                </Right>
-=======
             onPress={() => this.props.navigation.navigate('HelpDeskProfile')}
           >
           <Card style={cardStyle}>
@@ -250,45 +176,10 @@ export default class HelpDesk extends Component {
                   <Right style={right}> 
                     <Text style={time}>12.02.2018</Text>
                   </Right>
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
               </CardItem>
             </Card>
           </TouchableOpacity>
           <TouchableOpacity
-<<<<<<< HEAD
-            onPress={() => this.props.navigation.navigate('Login')}
-          >
-            <Card style={{ flex: 0, marginLeft: 5, marginRight: 5 }}>
-              <CardItem>
-                <Left>
-                  <Thumbnail
-                    source={{
-                      uri:
-                        'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
-                    }}
-                  />
-                  <Body>
-                    <Text
-                      style={{
-                        fontWeight: 'bold',
-                        color: 'black',
-                        fontSize: 14.5
-                      }}
-                    >
-                      Alisher Alisherov
-                    </Text>
-                    <Text>Name of disease</Text>
-                  </Body>
-                </Left>
-                <Right>
-                  <Text style={{ color: '#30A1FF', marginBottom: 50 }}>
-                    12.12.12
-                  </Text>
-                </Right>
-              </CardItem>
-            </Card>
-          </TouchableOpacity>
-=======
             onPress={() => this.props.navigation.navigate('HelpDeskProfile')}
           >
           <Card style={cardStyle}>
@@ -349,14 +240,11 @@ export default class HelpDesk extends Component {
               style={{ fontSize: 22, fontWeight: '500', color: '#fff' }}
             />
           </TouchableOpacity>
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
         </Content>
       </Container>
     );
   }
 }
-<<<<<<< HEAD
-=======
 
 const styles = StyleSheet.create({
   cardStyle: {
@@ -415,4 +303,3 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
 });
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92

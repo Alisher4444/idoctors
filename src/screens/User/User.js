@@ -1,26 +1,13 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
-=======
 import { Text, View, StyleSheet, ScrollView, TouchableOpacity, Image, } from 'react-native';
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
 
 import {
   Icon,
   Container,
-<<<<<<< HEAD
-  Header,
-  Content,
-  Left,
-  Body,
-  Title,
-  Thumbnail,
-=======
   Content,
   Left,
   Body,
   // Thumbnail,
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
   Card,
   CardItem,
   Right
@@ -33,16 +20,12 @@ export default class User extends Component {
   };
 
   render() {
-<<<<<<< HEAD
-    return (
-=======
     const { photo, uinfo, name, spec, button, btnText, cardView, card, bdyText,
       btnsBttm, call, message, all, det, icons, cardItem, left, content, right,
       btnTextBottom } = styles;
     return (
       
       <ScrollView>
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
       <Container>
         <Content
           contentContianerStyle={{
@@ -51,45 +34,6 @@ export default class User extends Component {
             justifyContent: 'center'
           }}
         >
-<<<<<<< HEAD
-          <View
-            style={{
-              width: '100%',
-              height: 200,
-              //backgroundColor: 'rgba(16, 103, 229,0.5)',
-              zIndex: 2
-            }}
-          >
-            <Thumbnail
-              large
-              source={{
-                uri:
-                  'https://www.jamsadr.com/images/neutrals/person-donald-900x1080.jpg'
-              }}
-              style={styles.photo}
-            />
-            <View style={styles.uinfo}>
-              <Text style={styles.name}>Alisher Bazarkhanov</Text>
-              <Text style={styles.spec}>Developer</Text>
-            </View>
-          </View>
-          <TouchableOpacity style={styles.button} onPress={this.onPress}>
-            <Text style={styles.btnText}> Touch Here </Text>
-          </TouchableOpacity>
-          <View style={styles.cardView}>
-            <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('Information')}
-            >
-              <Card style={styles.card}>
-                <CardItem>
-                  <Left>
-                    <Icon name="bluetooth" />
-                  </Left>
-                  <Body>
-                    <Text style={styles.bdyText}>Personal Information</Text>
-                  </Body>
-                  <Right>
-=======
           
           <View
             style={all}
@@ -121,7 +65,6 @@ export default class User extends Component {
                     <Text style={bdyText}>Personal Information</Text>
                   </Body>
                   <Right style={right}>
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
                     <Icon name="arrow-forward" />
                   </Right>
                 </CardItem>
@@ -130,17 +73,6 @@ export default class User extends Component {
             <TouchableOpacity
               onPress={() => this.props.navigation.navigate('Information')}
             >
-<<<<<<< HEAD
-              <Card style={styles.card}>
-                <CardItem>
-                  <Left>
-                    <Icon name="bluetooth" />
-                  </Left>
-                  <Body>
-                    <Text style={styles.bdyText}>Call history</Text>
-                  </Body>
-                  <Right>
-=======
               <Card style={card}>
                 <CardItem style={cardItem}>
                   <Left style={left}>
@@ -150,7 +82,6 @@ export default class User extends Component {
                     <Text style={bdyText}>Call history</Text>
                   </Body>
                   <Right style={right}>
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
                     <Icon name="arrow-forward" />
                   </Right>
                 </CardItem>
@@ -159,17 +90,6 @@ export default class User extends Component {
             <TouchableOpacity
               onPress={() => this.props.navigation.navigate('Information')}
             >
-<<<<<<< HEAD
-              <Card style={styles.card}>
-                <CardItem>
-                  <Left>
-                    <Icon name="bluetooth" />
-                  </Left>
-                  <Body>
-                    <Text style={styles.bdyText}>Doctor's Notes</Text>
-                  </Body>
-                  <Right>
-=======
               <Card style={card}>
                 <CardItem style={cardItem}>
                   <Left style={left}>
@@ -179,7 +99,6 @@ export default class User extends Component {
                     <Text style={bdyText}>Doctor's Notes</Text>
                   </Body>
                   <Right style={right}>
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
                     <Icon name="arrow-forward" />
                   </Right>
                 </CardItem>
@@ -187,18 +106,6 @@ export default class User extends Component {
             </TouchableOpacity>
           </View>
         </Content>
-<<<<<<< HEAD
-        <View style={styles.btnsBttm}>
-          <TouchableOpacity style={styles.call} onPress={this.onPress}>
-            <Text style={styles.btnText}>  Позвонить </Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.message} onPress={this.onPress}>
-            <Text style={styles.btnText}> Написать </Text>
-          </TouchableOpacity>
-        </View>
-      </Container>
-=======
         <View style={btnsBttm}>
           <TouchableOpacity style={call} onPress={this.onPress}>
             <Text style={btnTextBottom}>  Позвонить </Text>
@@ -211,7 +118,6 @@ export default class User extends Component {
       </Container>
       </ScrollView>
       
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
     );
   }
 }
@@ -220,26 +126,6 @@ const styles = StyleSheet.create({
   photo: {
     marginLeft: 'auto',
     marginRight: 'auto',
-<<<<<<< HEAD
-    marginTop: 50,
-    width: 100,
-    height: 100,
-    borderRadius: 50
-  },
-  uinfo: {
-    marginLeft: 'auto',
-    marginRight: 'auto'
-  },
-  name: {
-    color: 'black',
-    fontSize: 23
-  },
-  spec: {
-    color: 'black',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    fontSize: 15
-=======
     width: 155,
     borderRadius: 80,
     height: 160,
@@ -276,32 +162,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '300',
     marginTop: 18,
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
   },
   button: {
     alignItems: 'center',
     backgroundColor: '#10A1E5',
-<<<<<<< HEAD
-    padding: 10,
-    borderRadius: 50,
-    marginLeft: 20,
-    marginRight: 20,
-    marginTop: 30
-  },
-  cardView: {
-    marginTop: 50
-  },
-  card: {
-    marginLeft: 10,
-    marginRight: 10
-  },
-  btnText: {
-    color: 'white',
-    fontSize: 20
-  },
-  bdyText: {
-    fontSize: 20
-=======
     padding: 14,
     borderRadius: 50,
     marginLeft: 20,
@@ -353,7 +217,6 @@ const styles = StyleSheet.create({
     color: '#3b3b3b',
     fontSize: 14,
     fontWeight: '300',
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
   },
   btnsBttm: {
     position: 'absolute',
@@ -364,19 +227,6 @@ const styles = StyleSheet.create({
   },
   call: {
     width: '50%',
-<<<<<<< HEAD
-    height: 50,
-    alignItems: 'center',
-    backgroundColor: '#27AE60',
-    padding: 10
-  },
-  message: {
-    width: '50%',
-    height: 50,
-    padding: 10,
-    alignItems: 'center',
-    backgroundColor: '#F39C12'
-=======
     alignItems: 'center',
     backgroundColor: '#27AE60',
     padding: 30,
@@ -387,6 +237,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F39C12',
     
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
   }
 });

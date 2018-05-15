@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-import { Image } from 'react-native';
-import { Container, View, Button, Icon, Fab } from 'native-base';
-=======
 import { Image, ScrollView, Text, TouchableOpacity } from 'react-native';
 import { Container, Header, View, Button, Icon, Fab } from 'native-base';
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
 import ScrollTabView from 'react-native-scrollable-tab-view';
 import Completed from '../Completed/Completed';
 import Upcoming from '../Upcoming/Upcoming';
@@ -13,16 +8,6 @@ import Canceled from '../Canceled/Canceled';
 
 export default class Consultation extends Component {
   static navigationOptions = {
-<<<<<<< HEAD
-    title: 'Consultation',
-
-    drawerIcon: (
-      <Image
-        source={require('../../../assets/home.png')}
-        style={{ height: 24, width: 24 }}
-      />
-    )
-=======
     title: 'APPOINTMENT',
 
     // drawerIcon: (
@@ -31,7 +16,6 @@ export default class Consultation extends Component {
     //     style={{ height: 24, width: 24 }}
     //   />
     // )
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
   };
   constructor() {
     super();
@@ -44,9 +28,6 @@ export default class Consultation extends Component {
     return (
       <Container>
         <View style={{ flex: 1 }}>
-<<<<<<< HEAD
-          <ScrollTabView>
-=======
           <ScrollTabView
           tabBarUnderlineStyle={{ backgroundColor: '#fff' }}
           tabBarBackgroundColor='#019ae8'
@@ -54,7 +35,6 @@ export default class Consultation extends Component {
           tabBarActiveTextColor='#fff'
           tabBarTextStyle={{ fontSize: 16 }}
           >
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
             <Completed tabLabel="Completed" navigation={navigation} />
             <Upcoming tabLabel="Upcoming" navigation={navigation} />
             <Canceled tabLabel="Canceled" navigation={navigation} />
@@ -64,11 +44,7 @@ export default class Consultation extends Component {
             active={this.state.active}
             direction="up"
             containerStyle={{}}
-<<<<<<< HEAD
-            style={{ backgroundColor: '#5067FF' }}
-=======
             style={{ backgroundColor: '#5067FF', borderLeftWidth: 1, borderLeftColor: 'red' }}
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
             position="bottomRight"
             onPress={() => this.setState({ active: !this.state.active })}
           >
@@ -85,10 +61,7 @@ export default class Consultation extends Component {
           </Fab>
         </View>
       </Container>
-<<<<<<< HEAD
-=======
       
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
     );
   }
 }

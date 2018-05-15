@@ -96,11 +96,7 @@ export default class Profile extends Component {
             <Text style={styles.btnText}>  Позвонить </Text>
           </TouchableOpacity>
 
-<<<<<<< HEAD
-          <TouchableOpacity style={styles.message}>
-=======
           <TouchableOpacity style={styles.message} onPress={this.onPress}>
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
             <Text style={styles.btnText}> Написать </Text>
           </TouchableOpacity>
         </View>

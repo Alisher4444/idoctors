@@ -1,16 +1,6 @@
 import React, { Component } from 'react';
 import {
   StyleSheet,
-<<<<<<< HEAD
-  Image,
-  Text,
-  View,
-  TextInput,
-  TouchableOpacity
-} from 'react-native';
-
-export default class Doctors extends Component {
-=======
   Text,
   View,
   ScrollView,
@@ -19,49 +9,11 @@ export default class Doctors extends Component {
 import { Button, Input } from '../../commons';
 
 class Login extends Component {
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
   static navigationOptions = {
     title: 'Login',
     header: null
   };
   render() {
-<<<<<<< HEAD
-    return (
-      <View style={styles.container}>
-        <View style={styles.logoContainer}>
-          <Image
-            style={styles.logo}
-            source={require('../../../assets/logo.png')}
-          />
-          <Text style={styles.title}>Doctors Sign In</Text>
-
-          <TextInput
-            placeholder="Username"
-            placeholderTextColor="#E0E0E0"
-            style={styles.input}
-          />
-          <TextInput
-            placeholder="Password"
-            placeholderTextColor="#E0E0E0"
-            style={styles.input}
-          />
-          <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('Home')}
-            style={styles.button}
-          >
-            <Text style={styles.btnText}>LOGIN</Text>
-          </TouchableOpacity>
-        </View>
-        <View style={styles.signupTextCont}>
-          <Text style={styles.signupText}> Don't have an account yet?</Text>
-          <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('Register')}
-          >
-            <Text style={styles.signup}> SignUp </Text>
-          </TouchableOpacity>
-        </View>
-      </View>
-=======
     const { resetContainer, container, title, 
       questionText, link, signupTextCont, contentContainer } = styles;
     return (
@@ -105,68 +57,11 @@ class Login extends Component {
           </View>
       </View>
       
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
     );
   }
 }
 const styles = StyleSheet.create({
   container: {
-<<<<<<< HEAD
-    flex: 1,
-    backgroundColor: 'white',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  logoContainer: {
-    alignItems: 'center',
-    flexGrow: 1,
-    justifyContent: 'center'
-  },
-  logo: {
-    marginBottom: 50
-  },
-  title: {
-    color: '#212121',
-    fontSize: 30,
-    marginBottom: 20
-  },
-  signupTextCont: {
-    flexGrow: 1,
-    justifyContent: 'flex-end',
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginTop: 50
-  },
-  signupText: {},
-  signup: {
-    fontWeight: 'bold',
-    color: '#0D47A1'
-  },
-  input: {
-    width: 300,
-    height: 50,
-    backgroundColor: 'rgba(255,255,255,0.2)',
-    marginBottom: 20,
-    color: '#FFF',
-    paddingHorizontal: 10,
-    borderRadius: 40,
-    borderWidth: 0.5,
-    borderColor: '#E0E0E0',
-    paddingLeft: 40
-  },
-  button: {
-    height: 50,
-    width: 300,
-    backgroundColor: '#0091EA',
-    paddingVertical: 15,
-    alignItems: 'center',
-    borderRadius: 40
-  },
-  btnText: {
-    color: '#fff'
-  }
-});
-=======
     backgroundColor: '#fff',
     flex: 1,
     position: 'relative',
@@ -213,4 +108,3 @@ const styles = StyleSheet.create({
   }
 });
 export default Login;
->>>>>>> 1ab18cf455540efa5a2f303a5480a7c671c4ee92
