@@ -5,15 +5,55 @@ import {
   Text,
   View,
   TextInput,
-  TouchableOpacity
+  TouchableOpacity,
+  Alert
 } from 'react-native';
+
+import firebase from 'firebase';
 
 export default class Login extends Component {
   static navigationOptions = {
     title: 'Login',
     header: null
   };
+
+  constructor() {
+    super();
+    this.handlePress = this.handlePress.bind(this);
+  }
+  state = {
+    email: '',
+    password: '',
+    errorMessage: '',
+    loading: false
+  };
+
+  // onLoginSuccess(user) {
+  //   const { alert } = Alert;
+  //   this.setState({
+  //     email: '',
+  //     password: '',
+  //     errorMessage: '',
+  //     loading: false
+  //   });
+  // }
+
+  handlePress({ email, password }, navigate) {
+    const { alert } = Alert;
+    this.setState({ loading: true });
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then(() => {
+        navigate('Home');
+      })
+      .catch(() => {
+        alert('Error brat');
+      });
+  }
+
   render() {
+    const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
         <View style={styles.logoContainer}>
@@ -27,14 +67,18 @@ export default class Login extends Component {
             placeholder="Username"
             placeholderTextColor="#E0E0E0"
             style={styles.input}
+            value={this.state.email}
+            onChangeText={email => this.setState({ email })}
           />
           <TextInput
             placeholder="Password"
             placeholderTextColor="#E0E0E0"
             style={styles.input}
+            value={this.state.password}
+            onChangeText={password => this.setState({ password })}
           />
           <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('PatientHome')}
+            onPress={() => this.handlePress({ ...this.state }, navigate)}
             style={styles.button}
           >
             <Text style={styles.btnText}>LOGIN</Text>

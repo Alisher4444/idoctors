@@ -1,16 +1,6 @@
 import React from 'react';
-import { StyleSheet, Image, Text, TouchableOpacity } from 'react-native';
-import {
-  Container,
-  Content,
-  Header,
-  Body,
-  Icon,
-  Left,
-  Button,
-  Title,
-  Tab
-} from 'native-base';
+import { StyleSheet, Image } from 'react-native';
+import { Container, Content, Header, Body, Icon } from 'native-base';
 import { DrawerNavigator, DrawerItems, StackNavigator } from 'react-navigation';
 import {
   Switch,

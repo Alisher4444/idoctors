@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Image, Text, TouchableOpacity } from 'react-native';
-import { Container, Header, View, Button, Icon, Fab } from 'native-base';
+import { Image } from 'react-native';
+import { Container, View, Button, Icon, Fab } from 'native-base';
 import ScrollTabView from 'react-native-scrollable-tab-view';
 import Completed from '../Completed/Completed';
 import Upcoming from '../Upcoming/Upcoming';
