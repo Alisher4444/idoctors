@@ -58,7 +58,33 @@ export default class Doctors extends Component {
                 </Left>
                 <Body style={allInfoContainer}>
                     <Text style={nameStyle}>
-                      Alisher Bazarkhanov
+                      Karlos Nillk
+                    </Text>
+                    <Text note style={personalInfoStyle}>Name of Disease</Text>
+                    
+                  </Body>
+                  <Right style={right}> 
+
+                    <Text style={time}>12.02.2018</Text>
+                  </Right>
+              </CardItem>
+            </Card>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate('HelpDeskProfile')}
+          >
+          <Card style={cardStyle}>
+              <CardItem style={cardItemStyle}>
+                <Left style={left}>
+                  <Image 
+                    style={avatarStyle}
+                    source={require('../../../assets/download.jpeg')}
+                  />
+                  
+                </Left>
+                <Body style={allInfoContainer}>
+                    <Text style={nameStyle}>
+                      Karlos Nillk
                     </Text>
                     <Text note style={personalInfoStyle}>Name of Disease</Text>
                     
@@ -83,7 +109,40 @@ export default class Doctors extends Component {
                 </Left>
                 <Body style={allInfoContainer}>
                     <Text style={nameStyle}>
-                      Alisher Bazarkhanov
+                      Karlos Nillk
+                    </Text>
+                    <Text note style={personalInfoStyle}>Speciality</Text>
+                    <View note style={personalInfoStyle}>
+                    <Icon
+                      name="ios-add"
+                      ios="ios-add"
+                      android="md-add"
+                      style={{ fontSize: 22, fontWeight: '500', color: '#fff' }}
+                    />
+                    <Text style={time}>12 review</Text>
+                    </View>
+                  </Body>
+                  <Right style={right}> 
+                    <Text style={time}>12.02.2018</Text>
+                  </Right>
+              </CardItem>
+            </Card>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate('HelpDeskProfile')}
+          >
+          <Card style={cardStyle}>
+              <CardItem style={cardItemStyle}>
+                <Left style={left}>
+                  <Image 
+                    style={avatarStyle}
+                    source={require('../../../assets/download.jpeg')}
+                  />
+                  
+                </Left>
+                <Body style={allInfoContainer}>
+                    <Text style={nameStyle}>
+                      Karlos Nillk
                     </Text>
                     <Text note style={personalInfoStyle}>Name of Disease</Text>
                     
@@ -108,7 +167,7 @@ export default class Doctors extends Component {
                 </Left>
                 <Body style={allInfoContainer}>
                     <Text style={nameStyle}>
-                      Alisher Bazarkhanov
+                      Karlos Nillk
                     </Text>
                     <Text note style={personalInfoStyle}>Name of Disease</Text>
                     
@@ -133,7 +192,7 @@ export default class Doctors extends Component {
                 </Left>
                 <Body style={allInfoContainer}>
                     <Text style={nameStyle}>
-                      Alisher Bazarkhanov
+                      Karlos Nillk
                     </Text>
                     <Text note style={personalInfoStyle}>Name of Disease</Text>
                     
@@ -158,7 +217,7 @@ export default class Doctors extends Component {
                 </Left>
                 <Body style={allInfoContainer}>
                     <Text style={nameStyle}>
-                      Alisher Bazarkhanov
+                      Karlos Nillk
                     </Text>
                     <Text note style={personalInfoStyle}>Name of Disease</Text>
                     
@@ -183,57 +242,7 @@ export default class Doctors extends Component {
                 </Left>
                 <Body style={allInfoContainer}>
                     <Text style={nameStyle}>
-                      Alisher Bazarkhanov
-                    </Text>
-                    <Text note style={personalInfoStyle}>Name of Disease</Text>
-                    
-                  </Body>
-                  <Right style={right}> 
-                    <Text style={time}>12.02.2018</Text>
-                  </Right>
-              </CardItem>
-            </Card>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('HelpDeskProfile')}
-          >
-          <Card style={cardStyle}>
-              <CardItem style={cardItemStyle}>
-                <Left style={left}>
-                  <Image 
-                    style={avatarStyle}
-                    source={require('../../../assets/download.jpeg')}
-                  />
-                  
-                </Left>
-                <Body style={allInfoContainer}>
-                    <Text style={nameStyle}>
-                      Alisher Bazarkhanov
-                    </Text>
-                    <Text note style={personalInfoStyle}>Name of Disease</Text>
-                    
-                  </Body>
-                  <Right style={right}> 
-                    <Text style={time}>12.02.2018</Text>
-                  </Right>
-              </CardItem>
-            </Card>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('HelpDeskProfile')}
-          >
-          <Card style={cardStyle}>
-              <CardItem style={cardItemStyle}>
-                <Left style={left}>
-                  <Image 
-                    style={avatarStyle}
-                    source={require('../../../assets/download.jpeg')}
-                  />
-                  
-                </Left>
-                <Body style={allInfoContainer}>
-                    <Text style={nameStyle}>
-                      Alisher Bazarkhanov
+                      Karlos Nillk
                     </Text>
                     <Text note style={personalInfoStyle}>Name of Disease</Text>
                     
