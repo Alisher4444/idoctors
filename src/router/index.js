@@ -16,7 +16,8 @@ import {
   Switch,
   Login,
   DoctorsLogin,
-  Register,
+  DoctorRegister,
+  ClientRegister,
   DoctorProfile,
   HelpDeskProfile,
   Consultation,
@@ -41,6 +42,7 @@ const CustomDrawerContentComponent = props => (
           style={styles.drawerImage}
           source={require('../../assets/logo.png')}
         />
+        <Text style={{ color: 'white' }}> Alisher Bazarkhanov</Text>
       </Body>
     </Header>
     <Content style={styles.drawerItemStyle}>
@@ -53,24 +55,23 @@ const LoginStack = StackNavigator({
   DoctorsLogin: {
     screen: DoctorsLogin
   },
-  Register: {
-    screen: Register
+  DoctorRegister: {
+    screen: DoctorRegister
   }
 });
 const LoginPatient = StackNavigator({
   Login: {
     screen: Login
   },
-  Register: {
-    screen: Register
+  ClientRegister: {
+    screen: ClientRegister
   }
 });
 
 const DrawerStack = DrawerNavigator(
   {
     Home: {
-      screen: HomeScreen,
-      
+      screen: HomeScreen
     },
     Appointment: {
       screen: Consultation
@@ -90,11 +91,10 @@ const DrawerStack = DrawerNavigator(
     drawerCloseRoute: 'DrawerClose',
     drawerToggleRoute: 'DrawerToggle',
     contentOptions: {
-    activeTintColor: '#019ae8',
-    activeBackgroundColor: '#fafafa',
-   },
-  },
-  
+      activeTintColor: '#019ae8',
+      activeBackgroundColor: '#fafafa'
+    }
+  }
 );
 
 DrawerStack.navigationOptions = ({ navigation }) => ({
@@ -117,12 +117,11 @@ DrawerStack.navigationOptions = ({ navigation }) => ({
   ),
   headerRight: (
     <Icon
-    style={{ paddingHorizontal: 10, color: '#fff' }}
+      style={{ paddingHorizontal: 10, color: '#fff' }}
       name="search"
       ios="ios-search"
       android="md-search"
       size={30}
-      
       onPress={() => {
         if (navigation.state.index === 0) {
           navigation.navigate('DrawerOpen');
@@ -132,13 +131,13 @@ DrawerStack.navigationOptions = ({ navigation }) => ({
       }}
     />
   ),
-  headerStyle: { 
+  headerStyle: {
     backgroundColor: '#019ae8',
     borderBottomColor: 'transparent',
     shadowColor: 'transparent',
     elevation: null
   },
-  headerTintColor: '#fff',
+  headerTintColor: '#fff'
 });
 
 const DrawerPatientStack = DrawerNavigator(
@@ -162,8 +161,8 @@ const DrawerPatientStack = DrawerNavigator(
     drawerToggleRoute: 'DrawerToggle',
     contentOptions: {
       activeTintColor: '#019ae8',
-      activeBackgroundColor: '#fafafa',
-     },
+      activeBackgroundColor: '#fafafa'
+    }
   }
 );
 
@@ -187,12 +186,11 @@ DrawerPatientStack.navigationOptions = ({ navigation }) => ({
   ),
   headerRight: (
     <Icon
-    style={{ paddingHorizontal: 10, color: '#fff' }}
+      style={{ paddingHorizontal: 10, color: '#fff' }}
       name="search"
       ios="ios-search"
       android="md-search"
       size={30}
-      
       onPress={() => {
         if (navigation.state.index === 0) {
           navigation.navigate('DrawerOpen');
@@ -202,13 +200,13 @@ DrawerPatientStack.navigationOptions = ({ navigation }) => ({
       }}
     />
   ),
-  headerStyle: { 
+  headerStyle: {
     backgroundColor: '#019ae8',
     borderBottomColor: 'transparent',
     shadowColor: 'transparent',
     elevation: null
   },
-  headerTintColor: '#fff',
+  headerTintColor: '#fff'
 });
 
 const Router = StackNavigator({
@@ -221,12 +219,13 @@ const Router = StackNavigator({
   LoginStack: {
     screen: LoginStack
   },
-  DrawerStack: {
-    screen: DrawerStack
-  },
   LoginPatient: {
     screen: LoginPatient
   },
+  DrawerStack: {
+    screen: DrawerStack
+  },
+
   DrawerPatientStack: {
     screen: DrawerPatientStack
   },
@@ -266,7 +265,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   drawerHeader: {
-    height: 200,
+    height: 200
     //backgroundColor: '#019ae8'
   },
   drawerImage: {

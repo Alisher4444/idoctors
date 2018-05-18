@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, ScrollView, TouchableOpacity, Image, } from 'react-native';
+import {
+  Text,
+  View,
+  StyleSheet,
+  ScrollView,
+  TouchableOpacity,
+  Image
+} from 'react-native';
 
 import {
   Icon,
@@ -20,104 +27,117 @@ export default class User extends Component {
   };
 
   render() {
-    const { photo, uinfo, name, spec, button, btnText, cardView, card, bdyText,
-      btnsBttm, call, message, all, det, icons, cardItem, left, content, right,
-      btnTextBottom } = styles;
+    const {
+      photo,
+      uinfo,
+      name,
+      spec,
+      button,
+      btnText,
+      cardView,
+      card,
+      bdyText,
+      btnsBttm,
+      call,
+      message,
+      all,
+      det,
+      icons,
+      cardItem,
+      left,
+      content,
+      right,
+      btnTextBottom
+    } = styles;
     return (
-      
       <ScrollView>
-      <Container>
-        <Content
-          contentContianerStyle={{
-            flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}
-        >
-          
-          <View
-            style={all}
+        <Container>
+          <Content
+            contentContianerStyle={{
+              flex: 1,
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
           >
-            
-            <Image 
-               style={photo}
-              source={require('../../../assets/download.jpeg')}
-            />
-            <View style={uinfo}>
-              <Text style={name}>Alisher Bazarkhanov</Text>
-              <Text style={spec}>23 years old</Text>
-              <Text style={det}>last call at 12 March 12:00</Text>
+            <View style={all}>
+              <Image
+                style={photo}
+                source={require('../../../assets/download.jpeg')}
+              />
+              <View style={uinfo}>
+                <Text style={name}>Alisher Bazarkhanov</Text>
+                <Text style={spec}>23 years old</Text>
+                <Text style={det}>last call at 12 March 12:00</Text>
+              </View>
             </View>
+            <TouchableOpacity style={button} onPress={this.onPress}>
+              <Text style={btnText}> Next call 13 March 13:00 </Text>
+            </TouchableOpacity>
+            <View style={cardView}>
+              <TouchableOpacity
+                onPress={() => this.props.navigation.navigate('Information')}
+              >
+                <Card style={card}>
+                  <CardItem style={cardItem}>
+                    <Left style={left}>
+                      <Icon name="account" style={icons} />
+                    </Left>
+                    <Body style={content}>
+                      <Text style={bdyText}>Personal Information</Text>
+                    </Body>
+                    <Right style={right}>
+                      <Icon name="arrow-forward" />
+                    </Right>
+                  </CardItem>
+                </Card>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => this.props.navigation.navigate('Information')}
+              >
+                <Card style={card}>
+                  <CardItem style={cardItem}>
+                    <Left style={left}>
+                      <Icon name="ios-time-outline" style={icons} />
+                    </Left>
+                    <Body style={content}>
+                      <Text style={bdyText}>Call history</Text>
+                    </Body>
+                    <Right style={right}>
+                      <Icon name="arrow-forward" />
+                    </Right>
+                  </CardItem>
+                </Card>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => this.props.navigation.navigate('Information')}
+              >
+                <Card style={card}>
+                  <CardItem style={cardItem}>
+                    <Left style={left}>
+                      <Icon name="ios-clipboard-outline" style={icons} />
+                    </Left>
+                    <Body style={content}>
+                      <Text style={bdyText}>Doctor's Notes</Text>
+                    </Body>
+                    <Right style={right}>
+                      <Icon name="arrow-forward" />
+                    </Right>
+                  </CardItem>
+                </Card>
+              </TouchableOpacity>
             </View>
-          <TouchableOpacity style={button} onPress={this.onPress}>
-            <Text style={btnText}> Next call 13 March 13:00 </Text>
-          </TouchableOpacity>
-          <View style={cardView}>
-            <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('Information')}
-            >
-              <Card style={card}>
-                <CardItem style={cardItem}>
-                  <Left style={left}>
-                    <Icon name="account" style={icons} ios="ios-person" />
-                  </Left>
-                  <Body style={content}>
-                    <Text style={bdyText}>Personal Information</Text>
-                  </Body>
-                  <Right style={right}>
-                    <Icon name="arrow-forward" />
-                  </Right>
-                </CardItem>
-              </Card>
+          </Content>
+          <View style={btnsBttm}>
+            <TouchableOpacity style={call} onPress={this.onPress}>
+              <Text style={btnTextBottom}>  Позвонить </Text>
             </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('Information')}
-            >
-              <Card style={card}>
-                <CardItem style={cardItem}>
-                  <Left style={left}>
-                    <Icon name="ios-time-outline" style={icons} />
-                  </Left>
-                  <Body style={content}>
-                    <Text style={bdyText}>Call history</Text>
-                  </Body>
-                  <Right style={right}>
-                    <Icon name="arrow-forward" />
-                  </Right>
-                </CardItem>
-              </Card>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('Information')}
-            >
-              <Card style={card}>
-                <CardItem style={cardItem}>
-                  <Left style={left}>
-                    <Icon name="ios-clipboard-outline" style={icons} />
-                  </Left>
-                  <Body style={content}>
-                    <Text style={bdyText}>Doctor's Notes</Text>
-                  </Body>
-                  <Right style={right}>
-                    <Icon name="arrow-forward" />
-                  </Right>
-                </CardItem>
-              </Card>
+
+            <TouchableOpacity style={message} onPress={this.onPress}>
+              <Text style={btnTextBottom}> Написать </Text>
             </TouchableOpacity>
           </View>
-        </Content>
-        <View style={btnsBttm}>
-          <TouchableOpacity style={call} onPress={this.onPress}>
-            <Text style={btnTextBottom}>  Позвонить </Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={message} onPress={this.onPress}>
-            <Text style={btnTextBottom}> Написать </Text>
-          </TouchableOpacity>
-        </View>
-      </Container>
+        </Container>
       </ScrollView>
-      
     );
   }
 }
@@ -141,13 +161,13 @@ const styles = StyleSheet.create({
   uinfo: {
     marginLeft: 'auto',
     marginRight: 'auto',
-    marginBottom: 29,
+    marginBottom: 29
   },
   name: {
     color: 'black',
     fontSize: 18,
     fontWeight: '400',
-    marginTop: 19,
+    marginTop: 19
   },
   spec: {
     color: '#3b3b3b',
@@ -155,13 +175,13 @@ const styles = StyleSheet.create({
     marginRight: 'auto',
     fontSize: 14,
     fontWeight: '300',
-    marginTop: 5,
+    marginTop: 5
   },
   det: {
     color: '#3b3b3b',
     fontSize: 16,
     fontWeight: '300',
-    marginTop: 18,
+    marginTop: 18
   },
   button: {
     alignItems: 'center',
@@ -173,16 +193,15 @@ const styles = StyleSheet.create({
     shadowColor: '#fff'
   },
   cardView: {
-    marginTop: 20,
+    marginTop: 20
   },
   card: {
     marginLeft: 20,
     marginRight: 20,
-    borderRadius: 10,
-    
+    borderRadius: 10
   },
   cardItem: {
-    borderRadius: 10,
+    borderRadius: 10
   },
   left: {
     flex: 1,
@@ -216,7 +235,7 @@ const styles = StyleSheet.create({
   bdyText: {
     color: '#3b3b3b',
     fontSize: 14,
-    fontWeight: '300',
+    fontWeight: '300'
   },
   btnsBttm: {
     position: 'absolute',
@@ -229,13 +248,12 @@ const styles = StyleSheet.create({
     width: '50%',
     alignItems: 'center',
     backgroundColor: '#27AE60',
-    padding: 30,
+    padding: 30
   },
   message: {
     width: '50%',
     padding: 30,
     alignItems: 'center',
-    backgroundColor: '#F39C12',
-    
+    backgroundColor: '#F39C12'
   }
 });

@@ -14,12 +14,44 @@ import {
   CardItem,
   Right
 } from 'native-base';
+import firebase from 'firebase';
 
 export default class Profile extends Component {
   static navigationOptions = {
     title: 'Profile',
     tabBarVisible: false
   };
+
+  // constructor() {
+  //   super();
+  //   this.database = firebase
+  //     .database()
+  //     .ref('users/doctors/' + firebase.auth().currentUser.uid);
+
+  //   this.state = {
+  //     email: '',
+  //     password: '',
+  //     firstname: '',
+  //     lastname: ''
+  //   };
+  // }
+  // state = {
+  //   email: '',
+  //   password: '',
+  //   firstname: '',
+  //   lastname: ''
+  // };
+
+  // componentDidMount() {
+  //   this.database.on('value', snap => {
+  //     this.setState({
+  //       email: snap.val().email,
+  //       password: snap.val().password,
+  //       firstname: snap.val().firstname,
+  //       lastname: snap.val().lastname
+  //     });
+  //   });
+  // }
   render() {
     return (
       <Container>
@@ -47,7 +79,9 @@ export default class Profile extends Component {
               style={styles.photo}
             />
             <View style={styles.uinfo}>
-              <Text style={styles.name}>Alisher Bazarkhanov</Text>
+              <Text style={styles.name}>
+                {/* {this.state.firstname} {this.state.lastname} */}
+              </Text>
               <Text style={styles.spec}>Doctor</Text>
             </View>
           </View>

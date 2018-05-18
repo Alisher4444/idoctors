@@ -10,53 +10,88 @@ import { Button, Input } from '../../commons';
 
 class Login extends Component {
   static navigationOptions = {
-    title: 'Login',
+    title: 'Doctor Login',
     header: null
   };
+
+  constructor() {
+    super();
+
+    this.handlePress = this.handlePress.bind(this);
+  }
+  state = {
+    email: '',
+    password: '',
+    errorMessage: '',
+    loading: false
+  };
+
+  handlePress({ email, password }, navigate) {
+    const { alert } = Alert;
+    this.setState({ loading: true });
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then(user => {
+        navigate('PatientHome');
+      })
+      .catch(() => {
+        console.log('Error!');
+      });
+  }
+
   render() {
-    const { resetContainer, container, title, 
-      questionText, link, signupTextCont, contentContainer } = styles;
+    const {
+      resetContainer,
+      container,
+      title,
+      questionText,
+      link,
+      signupTextCont,
+      contentContainer
+    } = styles;
     return (
       <View style={container}>
-        <ScrollView 
-        contentContainerStyle={contentContainer}
-        >
-            <Text style={title}>SIGN IN</Text>
-            <Input 
+        <ScrollView contentContainerStyle={contentContainer}>
+          <Text style={title}>SIGN IN DOCTORS</Text>
+          <Input
             placeholder="Phone Number"
-            label={require('../../../assets/telephone.png')} 
+            label={require('../../../assets/telephone.png')}
             placeholderTextColor={'#c1c1c1'}
             height={70}
             width={70}
-            />
-            <Input 
+            value={this.state.email}
+            onChangeText={email => this.setState({ email })}
+          />
+          <Input
             placeholder="Password"
             label={require('../../../assets/pas.png')}
             height={65}
             width={50}
-            />
-            <View style={resetContainer}>
-              <Text style={questionText}>Forget Password?</Text>
-              <TouchableOpacity onPress={() => this.props.navigation.navigate('Home')} >
-              <Text style={link}>Reset it</Text></TouchableOpacity>
-            </View>
-            <Button
+            value={this.state.password}
+            onChangeText={password => this.setState({ password })}
+          />
+          <View style={resetContainer}>
+            <Text style={questionText}>Forget Password?</Text>
+            <TouchableOpacity
               onPress={() => this.props.navigation.navigate('Home')}
             >
-              SIGN IN
-            </Button>
-           
+              <Text style={link}>Reset it</Text>
+            </TouchableOpacity>
+          </View>
+          <Button onPress={() => this.props.navigation.navigate('Home')}>
+            SIGN IN
+          </Button>
         </ScrollView>
         <View style={signupTextCont}>
-              <Text style={questionText}> Don't have an account yet?</Text>
-              <TouchableOpacity
-                onPress={() => this.props.navigation.navigate('Register')}
-              >
-                <Text style={link}> SignUp </Text>
-              </TouchableOpacity>
-          </View>
+          <Text style={questionText}> Don't have an account yet?</Text>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate('DoctorRegister')}
+          >
+            <Text style={link}> SignUp </Text>
+          </TouchableOpacity>
+        </View>
       </View>
-      
     );
   }
 }
@@ -64,7 +99,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
     flex: 1,
-    position: 'relative',
+    position: 'relative'
   },
   title: {
     fontSize: 30,
@@ -73,10 +108,7 @@ const styles = StyleSheet.create({
     marginTop: 100,
     alignSelf: 'center'
   },
-  contentContainer: {
-    
-  
-  },
+  contentContainer: {},
   resetContainer: {
     marginLeft: 30,
     flex: 1,
@@ -103,8 +135,7 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingBottom: 20,
-    
+    paddingBottom: 20
   }
 });
 export default Login;

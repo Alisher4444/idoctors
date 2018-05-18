@@ -1,6 +1,7 @@
 import Switch from './Switch/Switch';
 import Login from './Login/Login';
-import Register from './Register/Register';
+import DoctorRegister from './Register/DoctorRegister';
+import ClientRegister from './Register/ClientRegister';
 import HomeScreen from './Home/HomeScreen';
 import SettingScreen from './Settings/SettingScreen';
 import DoctorProfile from './Profile/Profile';
@@ -24,7 +25,8 @@ import Support from './Support/Support';
 export {
   Switch,
   Login,
-  Register,
+  DoctorRegister,
+  ClientRegister,
   HomeScreen,
   SettingScreen,
   DoctorProfile,

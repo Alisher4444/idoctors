@@ -6,8 +6,8 @@ import PatientScreen from '../Patient/PatientScreen';
 
 export default class HomeScreen extends Component {
   static navigationOptions = {
-    title: 'MY PATIENTS',
-    
+    title: 'MY PATIENTS'
+
     // headerStyle: {
     //     backgroundColor: '#019ae8',
     //     borderBottomColor: 'transparent',
@@ -25,12 +25,12 @@ export default class HomeScreen extends Component {
   render() {
     const { navigation } = this.props;
     return (
-      <ScrollTabView 
-      tabBarUnderlineStyle={{ backgroundColor: '#fff' }}
-      tabBarBackgroundColor='#019ae8'
-      tabBarInactiveTextColor='#fff'
-      tabBarActiveTextColor='#fff'
-      tabBarTextStyle={{ fontSize: 16 }}
+      <ScrollTabView
+        tabBarUnderlineStyle={{ backgroundColor: '#fff' }}
+        tabBarBackgroundColor="#019ae8"
+        tabBarInactiveTextColor="#fff"
+        tabBarActiveTextColor="#fff"
+        tabBarTextStyle={{ fontSize: 16 }}
       >
         <PatientScreen tabLabel="PatientScreen" navigation={navigation} />
         <HelpDesk tabLabel="HelpDesk" navigation={navigation} />
@@ -38,4 +38,3 @@ export default class HomeScreen extends Component {
     );
   }
 }
-
